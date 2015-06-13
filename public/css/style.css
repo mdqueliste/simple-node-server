@@ -1,0 +1,66 @@
+#title {
+	text-align: center;
+	color: white;
+}
+
+#title  small{
+	color: #b5d0ea;
+}
+
+h4 {
+	padding: 4px 0;
+}
+
+div.panel {
+	margin: 10px 0 0 0;
+}
+
+h3.panel-title {
+	font-weight: bold;
+	font-size: 1em;
+}
+
+img.exercise {
+	width: 100%;
+	margin: 2px 0;
+}
+
+/* ZeroClipboard styles */
+
+.zero-clipboard {
+    position: relative;
+    display: none;
+}
+.btn-clipboard {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: block;
+    padding: 5px 8px;
+    font-size: 12px;
+    color: #777;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #e1e1e8;
+    border-radius: 0 4px 0 4px;
+}
+.btn-clipboard-hover {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+@media (min-width: 768px) {
+    .zero-clipboard {
+        display: block;
+    }
+    .zero-clipboard .btn-clipboard {
+        top: -16px;
+        border-top-right-radius: 0;
+    }
+}
+
+.jumbotron {
+	background-color: #428bca;
+}
