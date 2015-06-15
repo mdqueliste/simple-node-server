@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/prettify.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-3 column">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Hello World</a>
+				</li>
+				<li>
+					<a href="text-formatting-1.html">Text Formatting 1</a>
+				</li>
+				<li>
+					<a href="text-formatting-2.html">Text Formatting 2</a>
+				</li>
+				<li  class="active">
+					<a href="images-1.html">Images 1</a>
+				</li>
+				<li>
+					<a href="images-2.html">Images 2</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9 column">
+			<h2>Images 1</h2>
+			In HTML, images are defined with the <code class="prettify">&lt;img&gt;</code> tag. The <code class="prettify">&lt;img&gt;</code> tag is empty, it only contains attributes, and does not have a closing tag. However, a slash can be added before the greater-than sign for <abbr title="Extensible Hypertext Markup Language">XHTML</abbr> validity.
+	
+			<hr/>
+			<!--Attributes-->
+			<h4>Attributes</h4>
+			There are two important attributes of an <code class="prettify">&lt;img&gt;</code> tag:
+			<table class="table">
+				<tr>
+					<th> Attribute </th>
+					<th> Meaning </th>
+				</tr>
+				<tr>
+					<td> src </td>
+					<td> stands for "source" which provides the web browser the source of the image </td>
+				</tr>
+				<tr>
+					<td> alt </td>
+					<td> stands for "alternative" which provides a text-based alternative for users in case the image will not load, or if they are visually impaired </td>
+				</tr>
+			</table>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/baby.jpg" alt="This is a cute baby.">
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;img src=&quot;baby.jpg&quot; alt=&quot;This is a cute baby.&quot;/&gt;</code></pre>
+			</div>
+			
+			<br/>
+			Other attributes of the <code class="prettify">&lt;img&gt;</code> tag are the <code>width</code>, <code>height</code> and <code>align</code>. You can also use the <code>style</code> attribute to specify the width and height of an image.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/baby.jpg" width="200px" height="150px" alt="This is a cute baby.">
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;img src=&quot;baby.jpg&quot; alt=&quot;This is a cute baby.&quot; width=&quot;200px&quot; height=&quot;150px&quot;/&gt;
+</code></pre>
+			</div>
+			
+			<hr/>
+			<!--Paths-->
+			<h4>Absolute and Relative Paths</h4>
+			An image, inserted in a web page, can be found locally in your PCs or from the web. It is important that the path of the image is correct, otherwise the alternative text will be displayed.
+			
+			There are two ways to specify a path: absolute or relative.
+			
+			<h5>Absolute Paths</h5>
+			An absolute path gives the location of a file or directory in reference to a root directory. Absolute paths are easier to use and understand. However, it is not good practice on your own website. If you have to move your web site, you would have to change the paths in order to get it to work.
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/baby.jpg" alt="This is a cute baby.">
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;img src=&quot;C://Users/Betel/baby.jpg&quot; alt=&quot;This is a cute baby.&quot;/&gt;
+&lt;!--OR--&gt;
+&lt;img src=&quot;/etc/home/Downloads/baby.jpg&quot; alt=&quot;This is a cute baby.&quot;/&gt;
+&lt;!--OR--&gt;
+&lt;img src=&quot;http://example.com/uploads/baby.jpg&quot; alt=&quot;This is a cute baby.&quot;/&gt;</code></pre>
+			</div>
+			
+			<h5>Relative Paths</h5>
+			An absolute path gives the location of a file or directory in reference to the current working directory. The current working directory denotes the path where your web page is located.
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/baby.jpg" alt="This is a cute baby.">
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;!--If image is located in the same directory as the web page--&gt;
+&lt;img src=&quot;baby.jpg&quot; alt=&quot;This is a cute baby.&quot;/&gt;
+&lt;!--If image is located in a folder located in the directory of the web page--&gt;
+&lt;img src=&quot;folder/baby.jpg&quot; alt=&quot;This is a cute baby.&quot;/&gt;
+&lt;!--If image is located up one level to the directory of the web page--&gt;
+&lt;img src=&quot;../baby.jpg&quot; alt=&quot;This is a cute baby.&quot;/&gt;</code></pre>
+			</div>
+			
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">More Examples</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/path1.png" alt="Example of paths" width="100%"/>
+					<br/><br/><br/>
+					<img src="../img/path2.png" alt="Example of paths" width="100%"/>
+				</div>
+			</div>
+			
+			
+			<hr/>
+			<!--References-->
+			<h4>References</h4>
+			<ul>
+				<li> <a href="http://www.w3schools.com/html/html_images.asp">W3Schools</a> </li>
+				<li> <a href="http://learnwebcode.com/how-to-insert-an-image-in-xhtml/">Learn Web Code</a> </li>
+				<li> <a href="http://jeffreybarke.net/2013/06/paths-and-urls-relative-and-absolute/">Paths and URLs; relative and absolute</a> </li>
+			</ul>
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/prettify.js"></script>
+<script type="text/javascript" src="../js/ZeroClipboard.min.js"></script>
+<script>
+	!function ($) {
+    $(function(){
+      window.prettyPrint && prettyPrint()   
+    })
+	}(window.jQuery)
+  
+	 //Config ZeroClipboard
+	ZeroClipboard.config({
+		hoverClass: 'btn-clipboard-hover'
+	})
+
+	// Insert copy to clipboard button before .highlight
+	$('.highlight').each(function () {
+		var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>';
+		$(this).before(btnHtml)
+	});
+
+	var zeroClipboard = new ZeroClipboard($('.btn-clipboard'));
+	var htmlBridge = $('#global-zeroclipboard-html-bridge');
+
+	// Handlers for ZeroClipboard
+	zeroClipboard.on('ready', function (event) {
+		htmlBridge
+			.data('placement', 'top')
+			.attr('title', 'Copy to clipboard')
+			.tooltip();
+
+		// Copy to clipboard
+		zeroClipboard.on('copy', function (event) {
+			var highlight = $(event.target).parent().nextAll('.highlight').first();
+			event.clipboardData.setData("text/plain", highlight.text())
+		});
+
+		// Notify copy success and reset tooltip title
+		zeroClipboard.on('aftercopy', function () {
+			htmlBridge
+				.attr('title', 'Copied!')
+				.tooltip('fixTitle')
+				.tooltip('show')
+				.attr('title', 'Copy to clipboard')
+				.tooltip('fixTitle')
+		});
+	});
+
+	// Notify copy failure
+	zeroClipboard.on('error', function () {
+		ZeroClipboard.destroy();
+		htmlBridge
+			.attr('title', 'Flash required')
+			.tooltip('fixTitle')
+			.tooltip('show');
+	});
+</script>
+
+</body>
+</html>
