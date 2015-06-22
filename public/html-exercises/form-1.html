@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/github-gist.css">
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-3 column">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Hello World</a>
+				</li>
+				<li>
+					<a href="text-formatting-1.html">Text Formatting 1</a>
+				</li>
+				<li>
+					<a href="text-formatting-2.html">Text Formatting 2</a>
+				</li>
+				<li>
+					<a href="images-1.html">Images 1</a>
+				</li>
+				<li>
+					<a href="images-2.html">Images 2</a>
+				</li>
+				<li>
+					<a href="anchors.html">Anchors</a>
+				</li>
+				<li>
+					<a href="links.html">Links</a>
+				</li>
+				<li  class="active">
+					<a href="form-1.html">Form 1</a>
+				</li>
+				<li>
+					<a href="form-2.html">Form 2</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9 column">
+			<h2>HTML Forms</h2>
+			HTML Forms are one of the main points of interaction between a user and a web site or application. They allow users to send data to the web site. Most of the time that data is sent to the web server, but the web page can also intercept it to use it on its own.
+	
+			<hr/>
+			<!--Form Element-->
+			<h4>The <code>&lt;form></code> Element</h4>
+			All HTML forms start with a <code>&lt;form></code> element like this:
+
+			<div class="highlight"><pre class="prettyprint"><code>&lt;form><br>&lt;!--Insert form elements--><br> &lt;/form> </code></pre>
+			</div>
+			
+			HTML forms contain form elements. <br>Form elements are different types of input elements, checkboxes, radio buttons, submit buttons, and more.
+			
+			<hr/>
+			<!--Form Elements-->
+			<h4>Form Elements</h4>
+
+			<table class="table">
+				<tr>
+					<th> Element </th>
+					<th> Description </th>
+				</tr>
+				<tr>
+					<td> <em>input</em> </td>
+					<td> specifies an input field where the user can enter data	 </td>
+				</tr>
+				<tr>
+					<td> <em>label</em> </td>
+					<td> associates caption to a control </td>
+				</tr>
+				<tr>
+					<td> <em>select</em> </td>
+					<td> used to create a drop-down list </td>
+				</tr>
+				<tr>
+					<td> <em>option</em> </td>
+					<td> represents an item in a drop-down list </td>
+				</tr>
+				<tr>
+					<td> <em>textarea</em> </td>
+					<td> represents a multi-line plain-text editing control </td>
+				</tr>
+				<tr>
+					<td> <em>fieldset</em> </td>
+					<td> used to group several controls within a web form </td>
+				</tr>
+				<tr>
+					<td> <em>legend</em> </td>
+					<td> represents a caption for the content of its parent fieldset element </td>
+				</tr>
+				<tr>
+					<td> <em>button</em> </td>
+					<td> represents a clickable button </td>
+				</tr>
+			</table>
+			
+			<hr/>
+			<!--Input type: text-->
+			<h4>Input type: text</h4>
+			The  <code>&lt;input></code> element is the most important form element. The <code>type</code> attribute defines the way the <code>&lt;input></code> element behaves. It can radically change the element so pay attention to it.
+			
+			The most common type value is <code>text</code>.
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<label> Username: <input type="text" name="username"></label> 
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;label> Username: &lt;input type="text" name="username">&lt;/label>
+&lt;!--OR--&gt; 
+&lt;label for="username"> Username: &lt;/label>&lt;input type="text" name="username" id="username"></code></pre>
+			</div>
+			
+			Notice that the <code>&lt;input></code> tag is an auto-closing element, which means that it does not need a closing <code>&lt;/input></code> tag.<br><br>
+			
+			The <code>&lt;label></code> element does not render as anything special for the user. However, it provides a usability improvement for mouse users, because if the user clicks on the text within the <code>&lt;label></code> element, it toggles the control.
+			<br><br>
+			A label can be bound to an element either by placing the element inside the <code>&lt;label></code> element or by using the <code>for</code> attribute.
+			
+			<hr/>
+			<!--Input type: password-->
+			<h4>Input type: password</h4>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<label> Password: <input type="password" name="password" required></label>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;label> Password: &lt;input type="password" name="password" required>&lt;/label></code></pre>
+			</div>
+
+			The above two input elements look the same but the difference can be seen when you try to type inside the password field. Bullets will be displayed instead of characters. This is caused by the type attribute with value <code>password</code> which made the browser recognize that the input to the field should not be displayed as is.<br><br>
+			An additional attribute is used here which is new in HTML5, the <code>required</code> attribute. It specifies that an input field must be filled out before submitting the form.
+		
+			<!--Input type: radio-->
+			<h4>Input type: radio</h4>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					Status: 
+					<label><input type="radio" name="status" value="single"> Single </label>
+					<label><input type="radio" name="status" value="married"> Married </label>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>Status:
+&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;status&quot; value=&quot;single&quot;&gt; Single &lt;/label&gt;
+&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;status&quot; value=&quot;married&quot;&gt; Married &lt;/label&gt;</code></pre>
+			</div>
+
+			We use <code>type="radio"</code> here for all options that belongs to the item <em>Status</em>. It is important to take note that when using this type, the <code>name</code> attribute of all the options should be the same (here, all items have the <code>name</code> value <code>"status"</code>). This tells the browser not to allow the user to choose more than one of the options.
+			
+			<hr/>
+			<!--Input type: checkbox-->
+			<h4>Input type: checkbox</h4>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					CMSC Subjects:	
+					<label><input type="checkbox" name="subject" value="cmsc2" > CMSC 2 </label> &nbsp;
+					<label><input type="checkbox" name="subject" value="cmsc11" > CMSC 11 </label> &nbsp;
+					<label><input type="checkbox" name="subject" value="cmsc56" > CMSC 56 </label> &nbsp;
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>CMSC Subjects:	
+&lt;label>&lt;input type="checkbox" name="subject" value="cmsc2" > CMSC 2 &lt;/label>
+&lt;label>&lt;input type="checkbox" name="subject" value="cmsc11" > CMSC 11 &lt;/label>
+&lt;label>&lt;input type="checkbox" name="subject" value="cmsc56" > CMSC 56 &lt;/label></code></pre>
+			</div>
+			
+			<hr/>
+			<!--Input type: date-->
+			<h4>Input type: date</h4>
+			More helpful input <code>type</code> values are available especially with the advent of HTML5. You can explore more of these types in the References section below.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<label> Birthday: <input type="date" name="bday"></label>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;label> Birthday: &lt;input type="date" name="bday">&lt;/label>
+</code></pre>
+			</div>
+
+			<hr/>
+			<!--The select element-->
+			<h4>The <code>select</code> element</h4>
+			For form elements which would require many options, a drop-down list may be used. This allows multiple-option items to occupy minimal space in the page.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<label>Course:
+					<select name="course">
+						<option value="cmsc">BSCS</option>
+						<option value="devcom">BSDC</option>
+						<option value="comarts">BACA</option>
+						<option value="nutri">BSN</option>
+						<option value="others">Others</option>
+					</select>
+					</label>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;label>
+Course:
+&lt;select name="course">
+	&lt;option value="cmsc">BSCS&lt;/option>
+	&lt;option value="devcom">BSDC&lt;/option>
+	&lt;option value="comarts">BACA&lt;/option>
+	&lt;option value="nutri">BSN&lt;/option>
+	&lt;option value="others">Others&lt;/option>
+&lt;/select>
+&lt;/label></code></pre>
+			</div>
+			
+			The <code>&lt;select></code> element wraps the options to be displayed in the drop-down list. Each option is described by an <code>&lt;option></code> element.
+			
+			<hr/>
+			<!--The textarea element-->
+			<h4>The <code>textarea</code> element</h4>
+			This is the element to represent a multi-line plain-text editing control.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<label> Motto in life: <br><textarea rows="10" cols="50">Type something here..</textarea></label>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;label> Motto in life: &lt;br>&lt;textarea rows="10" cols="50">Type something here..&lt;/textarea>&lt;/label></code></pre>
+			</div>
+			
+			You can specify the width and height of the textarea using the attributes <code>rows</code> and <code>cols</code>.
+			
+			<!--Fieldset-->
+			<h4>Fieldset</h4>
+			To organize forms and group related elements, a <code>&lt;fieldset></code> tag is used. Let us try to combine some related form elements above and use a fieldset to group them.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<fieldset>
+						<legend>Account Details</legend>
+						<label> Username: <input type="text" name="username"></label> <br>
+						<label> Password: &nbsp;<input type="password" name="password" required></label><br><br>
+					</fieldset>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;fieldset>
+	&lt;legend>Account Details&lt;/legend>
+	&lt;label> Username: &lt;input type="text" name="username">&lt;/label> &lt;br>
+	&lt;label> Password: &lt;input type="password" name="password" required>&lt;/label>
+&lt;/fieldset></code></pre>
+			</div>
+			
+			The <code>&lt;legend></code> element provides a caption for the content of the fieldset.
+			
+			<hr>
+			<!--Button-->
+			<h4>Finally, the Button</h4>
+			Our form is almost ready; we just have to add a button to allow the user to send their data once they have filled out the form. This is simply done by using the <code>&lt;button></code> element:
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<form>
+						<fieldset>
+							<legend>Account Details</legend>
+							<label> Username: <input type="text" name="username"></label> <br>
+							<label> Password: &nbsp;<input type="password" name="password" required></label><br><br>
+						</fieldset>
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;button type="submit">Submit&lt;/button></code></pre>
+			</div>
+			
+			The above example made use of the <code>submit</code> type. If you click the button, the data on the form elements will be submitted to the page to process the data. More on that when you take higher CMSC subjects. For now, our concern is to prepare the HTML form.
+			<br><br>
+			If you don't answer the Password field and you click Submit, a tooltip will be displayed. Note that your code should be inside the <code>&lt;form> &lt;/form></code> if you want to try this and make it work.
+			
+			<hr/>
+			<!--Button type-->
+			<h4>Button type</h4>
+			The type attribute of a <code>button</code> element can have any of the following values:
+			<table class="table">
+				<tr>
+					<th> Type </th>
+					<th> Description </th>
+				</tr>
+				<tr>
+					<td> <em>submit</em> </td>
+					<td> button that submits the form data to the server </td>
+				</tr>
+				<tr>
+					<td> <em>reset</em> </td>
+					<td>  button that resets all the controls to their initial values </td>
+				</tr>
+				<tr>
+					<td> <em>button</em> </td>
+					<td> button that has no default behavior </td>
+				</tr>
+			</table>
+			<hr/>
+			
+			
+			
+			<!--References-->
+			<h4>References</h4>
+			<ul>
+				<li> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Mozilla Developer Network</a> </li>
+				<li> <a href="http://www.w3schools.com/html/html_forms.asp">W3Schools - Forms</a> </li>
+				<li> <a href="http://www.w3schools.com/tags/tag_input.asp">W3Schools - Input Element</a> </li>
+			</ul>
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" src="../js/ZeroClipboard.min.js"></script>
+<script>
+	//Config ZeroClipboard
+	ZeroClipboard.config({
+		hoverClass: 'btn-clipboard-hover'
+	})
+
+	// Insert copy to clipboard button before .highlight
+	$('.highlight').each(function () {
+		var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>';
+		$(this).before(btnHtml)
+	});
+
+	var zeroClipboard = new ZeroClipboard($('.btn-clipboard'));
+	var htmlBridge = $('#global-zeroclipboard-html-bridge');
+
+	// Handlers for ZeroClipboard
+	zeroClipboard.on('ready', function (event) {
+		htmlBridge
+			.data('placement', 'top')
+			.attr('title', 'Copy to clipboard')
+			.tooltip();
+
+		// Copy to clipboard
+		zeroClipboard.on('copy', function (event) {
+			var highlight = $(event.target).parent().nextAll('.highlight').first();
+			event.clipboardData.setData("text/plain", highlight.text())
+		});
+
+		// Notify copy success and reset tooltip title
+		zeroClipboard.on('aftercopy', function () {
+			htmlBridge
+				.attr('title', 'Copied!')
+				.tooltip('fixTitle')
+				.tooltip('show')
+				.attr('title', 'Copy to clipboard')
+				.tooltip('fixTitle')
+		});
+	});
+
+	// Notify copy failure
+	zeroClipboard.on('error', function () {
+		ZeroClipboard.destroy();
+		htmlBridge
+			.attr('title', 'Flash required')
+			.tooltip('fixTitle')
+			.tooltip('show');
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/github-gist.css">
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-3 column">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Hello World</a>
+				</li>
+				<li>
+					<a href="text-formatting-1.html">Text Formatting 1</a>
+				</li>
+				<li>
+					<a href="text-formatting-2.html">Text Formatting 2</a>
+				</li>
+				<li>
+					<a href="images-1.html">Images 1</a>
+				</li>
+				<li>
+					<a href="images-2.html">Images 2</a>
+				</li>
+				<li class="active">
+					<a href="anchors.html">Anchors</a>
+				</li>
+				<li>
+					<a href="links.html">Links</a>
+				</li>
+				<li>
+					<a href="form-1.html">Form 1</a>
+				</li>
+				<li>
+					<a href="form-2.html">Form 2</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9 column">
+			<h2>Anchors</h2>
+			Hyperlinks connect Web pages, or data items, to one another. In HTML, anchor elements define the hyperlinks you see when you browse the Web. An anchor can create a link from a part of a Web page, such as a text string or image, to another site, page or even a particular point within a page.
+	
+			<hr/>
+			<!--Attributes-->
+			<h4>Attributes</h4>
+			The most important attribute of an anchor element is the <code>href</code>.
+			<table class="table">
+				<tr>
+					<th> Attribute </th>
+					<th> Meaning </th>
+				</tr>
+				<tr>
+					<td> <em>href</em> </td>
+					<td> means Hypertext REFerence which specifies the destination address </td>
+				</tr>
+			</table>
+	
+			<hr/>
+			<!--Local Resource-->
+			<h4 id="local">Local Resource</h4>
+			When you browse the Web, you use hyperlinks to click from one site to another, between pages in the same site and between parts of the same page. To create a hyperlink in HTML, you use an anchor <code>&lt;a></code> element:
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<a href="another.html"> Another Page </a>
+				</div>
+			</div>
+			<div class="highlight"><pre class="html"><code>&lt;a href="another.html"> Another Page &lt;/a></code></pre>
+			</div>
+			
+			The value of the <code>href</code> can be an address for a website, the location of a particular page or even a section within a page. <br><br>In the above example, the <code>href</code> indicates a relative URI. This means that the destination location is being described <em>relative to the location of the hyperlink itself</em>. For example, you could use the above <code>href</code> if the another.html page is located in the same directory as the page containing the anchor. 
+			<br><br>
+			<!--
+			If the page was in a subdirectory (e.g. named "sub") in the same directory as the page containing the anchor, the link might be structured as follows:
+			<br><br>
+			
+			<div class="highlight"><pre class="html"><code>&lt;a href="sub/another.html"> Another Page &lt;/a></code></pre>
+			</div>-->
+			
+			<hr/>
+			<!--External Resource-->
+			<h4>External Resource</h4>
+			To include a link to another site, the full address is specified using a URL.
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<a href="http://www.google.com"> Google </a>
+				</div>
+			</div>
+			<div class="highlight"><pre class="html"><code>&lt;a href=&quot;http://www.google.com&quot;&gt; Google &lt;/a&gt;</code></pre>
+			</div>
+			
+			<hr/>
+			<!--Page Section-->
+			<h4>Page Section</h4>
+			Hyperlinks also connect to particular points within pages. This allows anchors to link between the different parts of a single page.
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<a href="#local"> Local Resource </a>
+				</div>
+			</div>
+			<div class="highlight"><pre class="html"><code>&lt;a href="#local"> Local Resource &lt;/a></code></pre>
+			</div>
+			
+			By clicking the link, you will jump from your current part of the page to the "Local Resource" section. To do this, the value of the <code>href</code> should be connected to the <code>id</code> of the section of the page where you want to jump into, in this example, the Local Resource heading. Together with the above code, the Local Resource heading on top of this page should be coded this way: <br><br>
+			
+			<div class="highlight"><pre class="html"><code>&lt;h4 id="local">Local Resource&lt;/h4></code></pre>
+			</div>
+			
+			The <code>id</code> of the <code>h4</code> tag allowed the anchor to identify which section of the page to jump into. The <code>href</code> should contain the id of that section preceded by a #, (<code>"#local"</code>).
+
+			<hr/>
+			<!--Image Links-->
+			<h4>Image Links</h4>
+			So far the hyperlinks we have seen use text as the content of the anchor element (e.g. "another"). The content of an anchor is whatever the user clicks on to visit the place indicated by the <code>href</code> attribute. This clickable object can be another media type or Web page item, but most commonly will be either text or an image:
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<a href="http://www.famigo.com/blog/2013/08/15-silly-baby-memes/"><img src="../img/babymeme.jpg" width="450"></a>
+				</div>
+			</div>
+			<div class="highlight"><pre class="html"><code>&lt;a href="http://www.famigo.com/blog/2013/08/15-silly-baby-memes/">&lt;img src="../img/babymeme.jpg" width="450">&lt;/a></code></pre>
+			</div>
+			
+			Try clicking on the image. You'll be brought to a page at <em>famigo.com</em>. You'll learn more about inserting images in a web page in our future meetings.
+			
+			<hr/>
+			<!--Paths-->
+			<h4>Absolute and Relative Paths</h4>
+			The value of the <code>href</code> attribute is not just a simple file name or a location on the web (URL). These values are in general file paths.
+			
+			There are two ways to specify a path: absolute or relative.
+			
+			<h5>Absolute Paths</h5>
+			An absolute path gives the location of a file or directory in reference to a root directory. Absolute paths are easier to use and understand. However, it is not good practice on your own website. If you have to move your web site, you would have to change the paths in order to get it to work.
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<a href="another.html"> Another Page </a>
+				</div>
+			</div>
+			<div class="highlight"><pre class="html"><code>&lt;a href="C://Users/Miyah/Desktop/another.html"> Another Page &lt;/a>
+&lt;!--OR--&gt;
+&lt;a href="/etc/home/Desktop/another.html"> Another Page &lt;/a>
+&lt;!--OR--&gt;
+&lt;a href=&quot;http://example.com/another.html&quot;> Another Page &lt;/a></code></pre>
+			</div>
+			
+			<h5>Relative Paths</h5>
+			An absolute path gives the location of a file or directory in reference to the current working directory. The current working directory denotes the path where your web page is located.
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<a href="another.html"> Another Page </a>
+				</div>
+			</div>
+			<div class="highlight"><pre class="html"><code>&lt;!--If another page is located in the same directory as the current web page-->
+&lt;a href="another.html"> Another Page &lt;/a>
+&lt;!--If another page is located in a folder located in the directory of the current web page-->
+&lt;a href="folder/another.html"> Another Page &lt;/a>
+&lt;!--If another page is located up one level to the directory of the current web page-->
+&lt;a href="../another.html&quot;> Another Page &lt;/a></code></pre>
+			</div>
+			
+			
+			The hyperlink is one of the fundamental building blocks of the Web, since it creates connections between sites, pages and specific data items. The ability of users to click between the chunks of information on the Web makes the vast amount of data available easier to navigate.
+			<hr/>
+			<!--References-->
+			<h4>References</h4>
+			<ul>
+				<li> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a">Mozilla Developer Network</a> </li>
+				<li> <a href="http://www.w3schools.com/html/html_links.asp">W3Schools</a> </li>
+			</ul>
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" src="../js/ZeroClipboard.min.js"></script>
+<script>
+	//Config ZeroClipboard
+	ZeroClipboard.config({
+		hoverClass: 'btn-clipboard-hover'
+	})
+
+	// Insert copy to clipboard button before .highlight
+	$('.highlight').each(function () {
+		var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>';
+		$(this).before(btnHtml)
+	});
+
+	var zeroClipboard = new ZeroClipboard($('.btn-clipboard'));
+	var htmlBridge = $('#global-zeroclipboard-html-bridge');
+
+	// Handlers for ZeroClipboard
+	zeroClipboard.on('ready', function (event) {
+		htmlBridge
+			.data('placement', 'top')
+			.attr('title', 'Copy to clipboard')
+			.tooltip();
+
+		// Copy to clipboard
+		zeroClipboard.on('copy', function (event) {
+			var highlight = $(event.target).parent().nextAll('.highlight').first();
+			event.clipboardData.setData("text/plain", highlight.text())
+		});
+
+		// Notify copy success and reset tooltip title
+		zeroClipboard.on('aftercopy', function () {
+			htmlBridge
+				.attr('title', 'Copied!')
+				.tooltip('fixTitle')
+				.tooltip('show')
+				.attr('title', 'Copy to clipboard')
+				.tooltip('fixTitle')
+		});
+	});
+
+	// Notify copy failure
+	zeroClipboard.on('error', function () {
+		ZeroClipboard.destroy();
+		htmlBridge
+			.attr('title', 'Flash required')
+			.tooltip('fixTitle')
+			.tooltip('show');
+	});
+</script>
+
+</body>
+</html>

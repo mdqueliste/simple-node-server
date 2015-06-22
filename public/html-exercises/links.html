@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/prettify.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-3 column">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Hello World</a>
+				</li>
+				<li>
+					<a href="text-formatting-1.html">Text Formatting 1</a>
+				</li>
+				<li>
+					<a href="text-formatting-2.html">Text Formatting 2</a>
+				</li>
+				<li>
+					<a href="images-1.html">Images 1</a>
+				</li>
+				<li>
+					<a href="images-2.html">Images 2</a>
+				</li>
+				<li>
+					<a href="anchors.html">Anchors</a>
+				</li>
+				<li class="active">
+					<a href="links.html">Links</a>
+				</li>
+				<li>
+					<a href="form-1.html">Form 1</a>
+				</li>
+				<li>
+					<a href="form-2.html">Form 2</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9 column">
+			<h2>Anchors Exercise</h2>
+			Make use of everything you learned in Anchors tutorial to create a Blog page (named <em>links.html</em>) with the following information:<br><br>
+			<ol>
+				<li>Blog title</li><br>
+				<li>Links to your Top 3 Favorite Movies (Briefly tell why you love each movie in a paragraph)</li><br>
+				<li>Links to your Top 3 Favorite Songs (Briefly tell why you love each song in a paragraph)</li><br>
+				<li>Your Social links (Choose two of the following)
+				<ul>
+					<li>A link to your Facebook timeline</li>
+					<li>A link to your Twitter profile </li>
+					<li>A link to your Google+ profile </li>
+				</ul></li><br>
+				<li>Links to your two previous exercises
+				<ul>
+					<li>A link to your text-formatting-2.html</li>
+					<li>A link to your list-2.html</li>	
+				</ul></li><br>
+				<li>Links from your two previous exercises to this page <strong>(Edit your previous exercises and add a link to go to this page)</strong>
+				<ul>
+					<li>A link from your text-formatting-2.html</li>
+					<li>A link from your list-2.html</li>	
+				</ul></li><br>
+			</ol>
+			<em>* Note that you have to imitate the web page exactly how it looks. Make use of your learnings from your previous exercises (paragraphs, headings, lists).</em>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Screenshot</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/links/blog.jpg">
+				</div>
+			</div>
+			
+			
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/prettify.js"></script>
+<script type="text/javascript" src="../js/ZeroClipboard.min.js"></script>
+<script>
+	!function ($) {
+    $(function(){
+      window.prettyPrint && prettyPrint()   
+    })
+	}(window.jQuery)
+  
+	 //Config ZeroClipboard
+	ZeroClipboard.config({
+		hoverClass: 'btn-clipboard-hover'
+	})
+
+	// Insert copy to clipboard button before .highlight
+	$('.highlight').each(function () {
+		var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>';
+		$(this).before(btnHtml)
+	});
+
+	var zeroClipboard = new ZeroClipboard($('.btn-clipboard'));
+	var htmlBridge = $('#global-zeroclipboard-html-bridge');
+
+	// Handlers for ZeroClipboard
+	zeroClipboard.on('ready', function (event) {
+		htmlBridge
+			.data('placement', 'top')
+			.attr('title', 'Copy to clipboard')
+			.tooltip();
+
+		// Copy to clipboard
+		zeroClipboard.on('copy', function (event) {
+			var highlight = $(event.target).parent().nextAll('.highlight').first();
+			event.clipboardData.setData("text/plain", highlight.text())
+		});
+
+		// Notify copy success and reset tooltip title
+		zeroClipboard.on('aftercopy', function () {
+			htmlBridge
+				.attr('title', 'Copied!')
+				.tooltip('fixTitle')
+				.tooltip('show')
+				.attr('title', 'Copy to clipboard')
+				.tooltip('fixTitle')
+		});
+	});
+
+	// Notify copy failure
+	zeroClipboard.on('error', function () {
+		ZeroClipboard.destroy();
+		htmlBridge
+			.attr('title', 'Flash required')
+			.tooltip('fixTitle')
+			.tooltip('show');
+	});
+</script>
+
+</body>
+</html>

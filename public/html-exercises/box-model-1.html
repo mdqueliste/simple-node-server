@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/github-gist.css">
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-3 column">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Hello World</a>
+				</li>
+				<li>
+					<a href="text-formatting-1.html">Text Formatting 1</a>
+				</li>
+				<li>
+					<a href="text-formatting-2.html">Text Formatting 2</a>
+				</li>
+				<li>
+					<a href="images-1.html">Images 1</a>
+				</li>
+				<li>
+					<a href="images-2.html">Images 2</a>
+				</li>
+				<li>
+					<a href="anchors.html">Anchors</a>
+				</li>
+				<li>
+					<a href="links.html">Links</a>
+				</li>
+				<li>
+					<a href="form-1.html">Form 1</a>
+				</li>
+				<li>
+					<a href="form-2.html">Form 2</a>
+				</li>
+				<li  class="active">
+					<a href="boc-model-1.html">Box Model 1</a>
+				</li>
+				<li>
+					<a href="box-model-2.html">Box Model 2</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9 column">
+			<h2>Box Model 1</h2>
+			In HTML, each element is represented as a rectangular box. <br><br>
+			In CSS, each of these rectangular boxes is described using the standard box model. This model describes the content of the space taken by an element. It consists of: margin, border, padding, and the actual content.<br><br>			
+			The image below illustrates the box model:<br><br>	
+	
+			<img src="../img/box-model-1/box-model.gif">
+			
+			<hr/>
+			<!--Parts of the Box Model-->
+			<h4>Parts of the Box Model</h4>
+
+			<table class="table">
+				<tr>
+					<th> Area </th>
+					<th> Description </th>
+				</tr>
+				<tr>
+					<td> <em>content</em> </td>
+					<td> the content of the box, where text and images appear </td>
+				</tr>
+				<tr>
+					<td> <em>padding</em> </td>
+					<td> clears an area around the content; transparent </td>
+				</tr>
+				<tr>
+					<td> <em>border</em> </td>
+					<td> a border that goes around the padding and content </td>
+				</tr>
+				<tr>
+					<td> <em>margin</em> </td>
+					<td> Clears an area outside the border; transparent </td>
+				</tr>
+			</table>
+			
+			<hr/>
+			<!--Example of Box Model-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; border: 25px solid gray; margin: 25px;">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;p> Hooray! The Golden State Warriors won the NBA Finals! &lt;/p></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	/*The box model properties*/
+	padding: 25px;
+	border: 25px solid navy;
+	margin: 25px;
+}</code></pre>
+			</div>
+			
+			<hr/>
+			<!--Padding-->
+			<h4>Padding</h4>
+			The CSS padding properties define the space between the element border and the element content. The padding is affected by the background color of the element. The padding can be controlled using the <code>padding-top</code>, <code>padding-bottom</code>, <code>padding-left</code>, <code>padding-right</code> properties or the shorthand <code>padding</code> CSS property.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; /*border: 25px solid gray; margin: 25px;*/">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	
+	padding-top: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+	/*SAME AS*/
+	padding: 25px;
+}</code></pre>
+			</div>
+			
+			<br>
+			If the sides have different values, you can specify different values for each side.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 10px 20px 30px 35px; /*border: 25px solid gray; margin: 25px;*/">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 35px;
+	/*SAME AS*/
+	padding: 10px 20px 30px 35px;
+	/*first value for top, second for right, third for bottom and fourth for left*/
+}</code></pre>
+			</div>
+			
+			<p>The padding property can have from one to four values.</p>
+			<ul>
+				<li>padding: 25px 50px 75px 100px; 
+				<ul><li>top padding is 25px</li>
+				<li>right padding is 50px</li>
+				<li>bottom padding is 75px</li>
+				<li>left padding is 100px</li></ul>
+				<br>
+				</li>
+				<li>padding: 25px 50px 75px;<ul>
+					<li>top padding is 25px</li>
+				<li>right and left paddings are 50px</li>
+				<li>bottom padding is 75px</li></ul>
+				<br>
+				</li>
+				<li>padding: 25px 50px;<ul><li>top and bottom paddings are 25px</li>
+				<li>right and left paddings are 50px</li></ul>
+				<br>
+				</li>
+				<li>padding: 25px;<ul><li>all four paddings are 25px</li></ul>
+				</li>
+			</ul>
+
+			<hr/>
+			<!--Border-->
+			<h4>Border</h4>
+			The CSS border properties allow you to specify the style, size, and color of an element's border.
+			<br><br>
+			
+			Different <code>border-style</code> property values:
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<p style="border: 1px none #000000;padding:3px;">none: Defines no border</p>
+					<p style="border: 1px dotted #000000;padding:3px;">dotted: Defines a dotted border</p>
+					<p style="border: 1px dashed #000000;padding:3px;">dashed: Defines a dashed border</p>
+					<p style="border: 1px solid #000000;padding:3px;">solid: Defines a solid border</p>
+					<p style="border: 3px double #000000;padding:3px;">double: Defines two borders. The width of the two borders are the same as the border-width value</p>
+					<p style="border: 5px groove lightblue;padding:3px;">groove: Defines a 3D grooved border. The effect depends on the border-color value</p>
+					<p style="border: 5px ridge lightblue;padding:3px;">ridge: Defines a 3D ridged border. The effect depends on the border-color value</p>
+					<p style="border: 5px inset lightblue;padding:3px;">inset: Defines a 3D inset border. The effect depends on the border-color value</p>
+					<p style="border: 5px outset lightblue;padding:3px;">outset: Defines a 3D outset border. The effect depends on the border-color value</p>
+				</div>
+			</div>
+			
+			Different <code>border-width</code> property values:
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<p style="border: 1px none #000000;padding:3px;">none: Defines no border</p>
+					<p style="border: 1px dotted #000000;padding:3px;">dotted: Defines a dotted border</p>
+					<p style="border: 1px dashed #000000;padding:3px;">dashed: Defines a dashed border</p>
+					<p style="border: 1px solid #000000;padding:3px;">solid: Defines a solid border</p>
+					<p style="border: 3px double #000000;padding:3px;">double: Defines two borders. The width of the two borders are the same as the border-width value</p>
+					<p style="border: 5px groove lightblue;padding:3px;">groove: Defines a 3D grooved border. The effect depends on the border-color value</p>
+					<p style="border: 5px ridge lightblue;padding:3px;">ridge: Defines a 3D ridged border. The effect depends on the border-color value</p>
+					<p style="border: 5px inset lightblue;padding:3px;">inset: Defines a 3D inset border. The effect depends on the border-color value</p>
+					<p style="border: 5px outset lightblue;padding:3px;">outset: Defines a 3D outset border. The effect depends on the border-color value</p>
+				</div>
+			</div>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Example</h3>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; /*border: 25px solid gray; margin: 25px;*/">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	
+	padding-top: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+	/*SAME AS*/
+	padding: 25px;
+}</code></pre>
+			</div>
+			
+			
+			
+			
+			
+			
+			<!--References-->
+			<h4>References</h4>
+			<ul>
+				<li> <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Mozilla Developer Network</a> </li>
+				<li> <a href="http://www.w3schools.com/html/html_forms.asp">W3Schools - Forms</a> </li>
+				<li> <a href="http://www.w3schools.com/tags/tag_input.asp">W3Schools - Input Element</a> </li>
+			</ul>
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" src="../js/ZeroClipboard.min.js"></script>
+<script>
+	//Config ZeroClipboard
+	ZeroClipboard.config({
+		hoverClass: 'btn-clipboard-hover'
+	})
+
+	// Insert copy to clipboard button before .highlight
+	$('.highlight').each(function () {
+		var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>';
+		$(this).before(btnHtml)
+	});
+
+	var zeroClipboard = new ZeroClipboard($('.btn-clipboard'));
+	var htmlBridge = $('#global-zeroclipboard-html-bridge');
+
+	// Handlers for ZeroClipboard
+	zeroClipboard.on('ready', function (event) {
+		htmlBridge
+			.data('placement', 'top')
+			.attr('title', 'Copy to clipboard')
+			.tooltip();
+
+		// Copy to clipboard
+		zeroClipboard.on('copy', function (event) {
+			var highlight = $(event.target).parent().nextAll('.highlight').first();
+			event.clipboardData.setData("text/plain", highlight.text())
+		});
+
+		// Notify copy success and reset tooltip title
+		zeroClipboard.on('aftercopy', function () {
+			htmlBridge
+				.attr('title', 'Copied!')
+				.tooltip('fixTitle')
+				.tooltip('show')
+				.attr('title', 'Copy to clipboard')
+				.tooltip('fixTitle')
+		});
+	});
+
+	// Notify copy failure
+	zeroClipboard.on('error', function () {
+		ZeroClipboard.destroy();
+		htmlBridge
+			.attr('title', 'Flash required')
+			.tooltip('fixTitle')
+			.tooltip('show');
+	});
+</script>
+
+</body>
+</html>

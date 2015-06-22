@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/prettify.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-3 column">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Hello World</a>
+				</li>
+				<li>
+					<a href="text-formatting-1.html">Text Formatting 1</a>
+				</li>
+				<li>
+					<a href="text-formatting-2.html">Text Formatting 2</a>
+				</li>
+				<li>
+					<a href="images-1.html">Images 1</a>
+				</li>
+				<li>
+					<a href="images-2.html">Images 2</a>
+				</li>
+				<li>
+					<a href="anchors.html">Anchors</a>
+				</li>
+				<li>
+					<a href="links.html">Links</a>
+				</li>
+				<li>
+					<a href="form-1.html">Form 1</a>
+				</li>
+				<li  class="active">
+					<a href="form-2.html">Form 2</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9 column">
+			<h2>HTML Forms Exercise</h2>
+			Make use of everything you learned in Forms 1 to imitate the following web page:
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Screenshot</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/form-2/exer.png">
+				</div>
+			</div>
+			
+			<hr>
+			<h4>I. Required fields</h4> 
+			The following items should be required:
+			<ul>
+				<li>Customer name</li>
+				<li>Mobile number</li>
+				<li>Delivery date</li>
+				<li>Preferred time</li>
+				<li>Delivery address</li>
+			</ul>
+			
+			So when the "Submit Order" button is clicked, tooltips should appear for the empty fields which are required.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Screenshot</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/form-2/required1.png">
+				</div>
+			</div>
+			
+			<hr>
+			<h4>II. Email field</h4> 
+			Choose the correct type value for the Email field so the form would verify if input is a valid email address.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Screenshot</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/form-2/email.png">
+				</div>
+			</div>
+			
+			<hr>
+			<h4>III. Flavors </h4> 
+			The following flavors should be available:
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Screenshot</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/form-2/flavors.png">
+				</div>
+			</div>
+			
+			<hr>
+			<h4>IV. Radio Button and Checkboxes</h4> 
+			The Size field should allow only one choice to be selected but more than one may be chosen for the Extra Toppings:
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Screenshot</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/form-2/radiocheckbox.png">
+				</div>
+			</div>
+			
+			<hr>
+			<h4>V. Calendar input</h4> 
+			Choose the correct type value for the Date field so the form would display a calendar to allow user input.
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Screenshot</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/form-2/date.png">
+				</div>
+			</div>
+			
+			<hr>
+			<h4>VI. Time field</h4> 
+			Choose the correct type value for the time field:
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Screenshot</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/form-2/time.png">
+				</div>
+			</div>
+			
+			<hr>
+			<h4>VII. Reset Button</h4> 
+			When the "Reset" button is clicked, the form should reset:
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Screenshot</h3>
+				</div>
+				<div class="panel-body">
+					<img src="../img/form-2/exer.png">
+				</div>
+			</div>
+			
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/prettify.js"></script>
+<script type="text/javascript" src="../js/ZeroClipboard.min.js"></script>
+<script>
+	!function ($) {
+    $(function(){
+      window.prettyPrint && prettyPrint()   
+    })
+	}(window.jQuery)
+  
+	 //Config ZeroClipboard
+	ZeroClipboard.config({
+		hoverClass: 'btn-clipboard-hover'
+	})
+
+	// Insert copy to clipboard button before .highlight
+	$('.highlight').each(function () {
+		var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>';
+		$(this).before(btnHtml)
+	});
+
+	var zeroClipboard = new ZeroClipboard($('.btn-clipboard'));
+	var htmlBridge = $('#global-zeroclipboard-html-bridge');
+
+	// Handlers for ZeroClipboard
+	zeroClipboard.on('ready', function (event) {
+		htmlBridge
+			.data('placement', 'top')
+			.attr('title', 'Copy to clipboard')
+			.tooltip();
+
+		// Copy to clipboard
+		zeroClipboard.on('copy', function (event) {
+			var highlight = $(event.target).parent().nextAll('.highlight').first();
+			event.clipboardData.setData("text/plain", highlight.text())
+		});
+
+		// Notify copy success and reset tooltip title
+		zeroClipboard.on('aftercopy', function () {
+			htmlBridge
+				.attr('title', 'Copied!')
+				.tooltip('fixTitle')
+				.tooltip('show')
+				.attr('title', 'Copy to clipboard')
+				.tooltip('fixTitle')
+		});
+	});
+
+	// Notify copy failure
+	zeroClipboard.on('error', function () {
+		ZeroClipboard.destroy();
+		htmlBridge
+			.attr('title', 'Flash required')
+			.tooltip('fixTitle')
+			.tooltip('show');
+	});
+</script>
+
+</body>
+</html>
