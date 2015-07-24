@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/github-gist.css">
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	
+		<div class="col-md-9 column">
+			<h2>Storing Information Exercise</h2>
+			For this exercise, create an html file in the public/javascript-exercises folder named <strong>storing-information-2.html</strong>. Save your external script (js file) in public/script folder as <strong>storing-information-2.js</strong>. With the given HTML content and partial javascript file, modify the web page in such a way it will look exactly like the screenshot below. Make use of what you've learned about from the previous tutorial to be able to correctly imitate the web page. 
+			
+			<h6 style="color:red;font-weight:bold;">Note: You cannot modify the html, only the javascript EXCEPT for adding the link to the external js.</h6>
+			
+			Details:
+			<ul>
+				<li>Change the title of the short story into something you think better suits it. The title shoud also be in &lt;h2>.</li>
+				<li>In the class "date", provide the date today using the Date object.</li>
+				<li>Change the characters of the story: Nino to Alonzo and Taylor Swift to Katy Perry.</li>
+				<li>Turn the last paragraph into uppercase letters.</li>
+				<li>Using the array "parts" (provided in the js file), supply the appropriate elements of the story.</li>
+				<li>Each element label (Characters, Setting, Theme) should be in &lt;strong>.</li>
+			</ul>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">HTML</h3>
+				</div>
+			</div>	
+				<div class="highlight"><pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Storing Information Exercise&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p id=&quot;title&quot;&gt;A Dish of Ice Cream&lt;/p&gt;
+        &lt;p id=&quot;date&quot;&gt;Date posted&lt;/p&gt;
+        
+        &lt;hr&gt;
+        &lt;p id=&quot;names&quot;&gt;In the days when an ice cream sundae cost much less, a 10 year old boy, named Nino Mulach, entered a hotel coffee shop and sat at a table. A waitress, named Taylor Swift, put a glass of water in front of him.&lt;/p&gt;
+        
+        &lt;p&gt;&quot;How much is an ice cream sundae?&quot;&lt;/p&gt;
+        
+        &lt;p&gt;&quot;50 cents,&quot; replied the waitress.&lt;/p&gt;
+        
+        &lt;p&gt;The little boy pulled his hand out of his pocket and studied a number of coins in it.&lt;/p&gt;
+        
+        &lt;p&gt;&quot;How much is a dish of plain ice cream?&quot; he inquired. Some people were now waiting for a table and the waitress was a bit impatient.&lt;/p&gt;
+        
+        &lt;p&gt;&quot;35 cents,&quot; she said brusquely.&lt;/p&gt;
+        
+        &lt;p&gt;The little boy again counted the coins. &quot;I’ll have the plain ice cream,&quot; he said.&lt;/p&gt;
+        
+        &lt;p&gt;The waitress brought the ice cream, put the bill on the table and walked away. The boy finished the ice cream, paid the cashier and departed.&lt;/p&gt;
+        
+        &lt;p&gt;When the waitress came back, she began wiping down the table and then swallowed hard at what she saw.&lt;/p&gt;
+        
+        &lt;p id=&quot;upper&quot;&gt;There, placed neatly beside the empty dish, were 15 cents – her tip.&lt;/p&gt;
+        &lt;br&gt;
+        
+        &lt;h3&gt;Elements of a Story&lt;/h3&gt;
+        &lt;p id=&quot;characters&quot;&gt;&lt;/p&gt;
+        &lt;p id=&quot;setting&quot;&gt;&lt;/p&gt;
+        &lt;p id=&quot;theme&quot;&gt;&lt;/p&gt;
+        
+        &lt;!--Provide the &lt;script&gt; tags here to link the external js--&gt;
+    &lt;/body&gt;
+    
+&lt;/html&gt;
+</code></pre>
+		    </div>
+		    <div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">JavaScript</h3>
+				</div>
+			</div>	
+				<div class="highlight"><pre class="prettyprint"><code>//Make use of the following array
+var elements = ["Characters: ", "Setting: ", "Theme: "];
+</code></pre>
+		    </div>
+		    <div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Screenshot</h4>
+				</div>
+				<div class="panel-body">
+					<img src="/images/storing-information-screenshot.png" style="width:100%;" >
+				</div>
+			</div>
+			
+			
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

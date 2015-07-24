@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/github-gist.css">
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<!--div class="row clearfix">
+		<div class="col-md-3 column">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Hello World</a>
+				</li>
+				<li>
+					<a href="text-formatting-1.html">Text Formatting 1</a>
+				</li>
+				<li>
+					<a href="text-formatting-2.html">Text Formatting 2</a>
+				</li>
+				<li>
+					<a href="images-1.html">Images 1</a>
+				</li>
+				<li>
+					<a href="images-2.html">Images 2</a>
+				</li>
+				<li>
+					<a href="anchors.html">Anchors</a>
+				</li>
+				<li>
+					<a href="links.html">Links</a>
+				</li>
+				<li>
+					<a href="form-1.html">Form 1</a>
+				</li>
+				<li>
+					<a href="form-2.html">Form 2</a>
+				</li>
+				<li  class="active">
+					<a href="boc-model-1.html">Box Model 1</a>
+				</li>
+				<li>
+					<a href="box-model-2.html">Box Model 2</a>
+				</li>
+			</ul>
+		</div-->
+		<div class="col-md-9 column">
+			<h2>Box Model Exercise</h2>
+			For this exercise, create an html file in the public/css-exercises folder named <strong>box-model-3.html</strong>. Save your external stylesheet (css file) in public/css folder as <strong>box-model-3.css</strong>. With the given HTML content, design the web page using an external style sheet in such a way it will look exactly like the screenshot below. Make use of what you've learned about the Box Model to be able to correctly design the web page. 
+			
+			<h6 style="color:red;font-weight:bold;">Note: You cannot modify the content, only the style sheet!</h6>
+			
+			Details:
+			<ul>
+				<li>The font family of the text in the web page should be <em>Arial</em>.</li>
+				<li>The width of the <code>whole</code> container is <em>900px</em> (excluding the padding).</li>
+				<li>The two shades of blue to be used are: <code>#84befe</code> (darker) and <code>#cbe5ff</code> (lighter)</li>
+				<li>Each navigation tab changes color and background color when mouse hovers over it.</li>
+				<li>The Like link in a rectangular box is fixed with <code>top:200px</code> and <code>right:-5px</code>.</li>
+				<li>The rest of the sizes are up to your judgement to make it look like the screenshots below.</li>
+			</ul>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">HTML</h3>
+				</div>
+			</div>	
+				<div class="highlight"><pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../css/box-model-3.css&quot; /&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;!--The fixed rectangular box on the right side--&gt;
+		&lt;div class=&quot;rect&quot;&gt; 
+			&lt;a href=&quot;https://www.facebook.com/wordpress&quot;&gt;Like us on FB&lt;/a&gt;
+		&lt;/div&gt;
+		
+		&lt;!--The light blue-colored container of everything--&gt;
+		&lt;div class=&quot;whole&quot;&gt;
+		
+			&lt;!--The invisible container of the small white box and big blue box--&gt;
+			&lt;div class=&quot;header&quot;&gt;
+			
+				&lt;!--The small white box--&gt;
+				&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+				
+				&lt;!--The big blue box--&gt;
+				&lt;div class=&quot;preview&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			
+			&lt;!--The container of the middle content--&gt;
+			&lt;div class=&quot;container&quot;&gt;
+			
+				&lt;!--The container of the navigation Tabs--&gt;
+				&lt;div class=&quot;nav&quot;&gt;
+					&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;Feedback&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;Donate&lt;/a&gt;
+				&lt;/div&gt;
+				
+				&lt;!--The white empty space in the middle--&gt;
+				&lt;div class=&quot;mid&quot;&gt;&lt;/div&gt;
+				
+				&lt;!--The container of the last section--&gt;
+				&lt;div class=&quot;last&quot;&gt;
+				
+					&lt;!--The left box--&gt;
+					&lt;div class=&quot;left&quot;&gt;
+					
+						&lt;!--The header of the left box--&gt;
+						&lt;div class=&quot;left-head&quot;&gt;&lt;/div&gt;
+					&lt;/div&gt;
+					
+					&lt;!--The right box--&gt;
+					&lt;div class=&quot;right&quot;&gt;
+					
+						&lt;!--The header of the right box--&gt;
+						&lt;div class=&quot;right-head&quot;&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;		
+			&lt;/div&gt;
+			
+			&lt;!--The footer text--&gt;
+			&lt;div class=&quot;footer&quot;&gt;CMSC2 Midyear 2015&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+		    </div>
+		    
+		    <div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Screenshots</h4>
+				</div>
+				<div class="panel-body">
+					<img src="../images/box-model/top.png" style="width:100%;" >
+				</div>
+			</div>
+		    
+		    <div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Screenshots</h4>
+				</div>
+				<div class="panel-body">
+					<img src="../images/box-model/bottom.png" style="width:100%;" >
+				</div>
+			</div>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Screenshots</h4>
+				</div>
+				<div class="panel-body">
+					<img src="../images/box-model/about.png" style="width:100%;" >
+				</div>
+			</div>
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
+</html>

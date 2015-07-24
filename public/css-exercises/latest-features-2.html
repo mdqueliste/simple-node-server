@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/github-gist.css">
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<!--div class="row clearfix">
+		<div class="col-md-3 column">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Hello World</a>
+				</li>
+				<li>
+					<a href="text-formatting-1.html">Text Formatting 1</a>
+				</li>
+				<li>
+					<a href="text-formatting-2.html">Text Formatting 2</a>
+				</li>
+				<li>
+					<a href="images-1.html">Images 1</a>
+				</li>
+				<li>
+					<a href="images-2.html">Images 2</a>
+				</li>
+				<li>
+					<a href="anchors.html">Anchors</a>
+				</li>
+				<li>
+					<a href="links.html">Links</a>
+				</li>
+				<li>
+					<a href="form-1.html">Form 1</a>
+				</li>
+				<li>
+					<a href="form-2.html">Form 2</a>
+				</li>
+				<li  class="active">
+					<a href="boc-model-1.html">Box Model 1</a>
+				</li>
+				<li>
+					<a href="box-model-2.html">Box Model 2</a>
+				</li>
+			</ul>
+		</div-->
+		<div class="col-md-9 column">
+			<h2>Latest Features Exercise</h2>
+			For this exercise, create an html file in the public/css-exercises folder named <strong>latest-features-2.html</strong>. Save your external stylesheet (css file) in public/css folder as <strong>latest-features-2.css</strong>. With the given HTML content, design the web page using an external style sheet in such a way it will look exactly like the screenshot below. Make use of what you've learned about from the previous tutorial to be able to correctly design the web page. 
+			
+			<h6 style="color:red;font-weight:bold;">Note: You cannot modify the html, only the style sheet! EXCEPT for adding a &lt;link> tag for the Google Font.</h6>
+			
+			In this exercise, you will just improve your <em>box-model-3.html</em>. You'll just make use the properties discussed in latest-features-1.html.
+			
+			Details:
+			<ul>
+				<li>All text in the page should have a Google font "Comfortaa".</li>
+				<li>The class "rect" should have a rounded border of 10px.</li>
+				<li>Change the background of the class "whole" into a gradient fading from #84befe to white to the top. </li>
+				<li>The small white box should have a shadow of gray, horizontally and vertically offset by 5px and has a blur of 10px;</li>
+				<li>The text inside the class "preview" should have a font-size of 90px and shadow of gray, horizontally and vertically offset by 5px and has a blur of 10px.</li>
+				<li>The navigation tabs should have a rounded upper right corner of 15px.</li>
+				<li>The left-head and right-head should have a font-size of 30px, rounded bottom corners of 20px and gradient background fading from #84befe to lightblue towards the top.</li>
+				<li>Instead of color  blue, the footer text should now be colored white.</li>
+			</ul>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">HTML</h3>
+				</div>
+			</div>	
+				<div class="highlight"><pre class="prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;latest-features-2.css&quot; /&gt;
+		&lt;!--Insert your &lt;link&gt; tag for the Google font HERE--&gt;
+	&lt;/head&gt;
+
+	&lt;body&gt;
+		&lt;!--The fixed rectangular box on the right side--&gt;
+		&lt;div class=&quot;rect&quot;&gt; 
+			&lt;a href=&quot;https://www.facebook.com/wordpress&quot;&gt;Like us on FB&lt;/a&gt;
+		&lt;/div&gt;
+		
+		&lt;!--The light blue-colored container of everything--&gt;
+		&lt;div class=&quot;whole&quot;&gt;
+		
+			&lt;!--The invisible container of the small white box and big blue box--&gt;
+			&lt;div class=&quot;header&quot;&gt;
+			
+				&lt;!--The small white box--&gt;
+				&lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+				
+				&lt;!--The big blue box--&gt;
+				&lt;div class=&quot;preview&quot;&gt;Theme Preview&lt;/div&gt;
+			&lt;/div&gt;
+			
+			&lt;!--The container of the middle content--&gt;
+			&lt;div class=&quot;container&quot;&gt;
+			
+				&lt;!--The container of the navigation Tabs--&gt;
+				&lt;div class=&quot;nav&quot;&gt;
+					&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;Feedback&lt;/a&gt;
+					&lt;a href=&quot;#&quot;&gt;Donate&lt;/a&gt;
+				&lt;/div&gt;
+				
+				&lt;!--The white empty space in the middle--&gt;
+				&lt;div class=&quot;mid&quot;&gt;&lt;/div&gt;
+				
+				&lt;!--The container of the last section--&gt;
+				&lt;div class=&quot;last&quot;&gt;
+				
+					&lt;!--The left box--&gt;
+					&lt;div class=&quot;left&quot;&gt;
+					
+						&lt;!--The header of the left box--&gt;
+						&lt;div class=&quot;left-head&quot;&gt;Links&lt;/div&gt;
+					&lt;/div&gt;
+					
+					&lt;!--The right box--&gt;
+					&lt;div class=&quot;right&quot;&gt;
+					
+						&lt;!--The header of the right box--&gt;
+						&lt;div class=&quot;right-head&quot;&gt;Register&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;		
+			&lt;/div&gt;
+			
+			&lt;!--The footer text--&gt;
+			&lt;div class=&quot;footer&quot;&gt;CMSC2 Midyear 2015&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+		    </div>
+		    
+		    <div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Screenshot</h4>
+				</div>
+				<div class="panel-body">
+					<img src="../images/latest-features/latest-features-screenshot.png" style="width:100%;" >
+				</div>
+			</div>
+			
+			
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

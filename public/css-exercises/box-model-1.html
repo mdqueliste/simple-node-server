@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/github-gist.css">
+	<style>
+		.cent {
+		  margin: auto;
+		  background: lightblue;
+		  width: 66%;
+		}
+		.uncent {
+		  margin: 20px;
+		  background: lightblue;
+		  width: 66%;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<!--div class="row clearfix">
+		<div class="col-md-3 column">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Hello World</a>
+				</li>
+				<li>
+					<a href="text-formatting-1.html">Text Formatting 1</a>
+				</li>
+				<li>
+					<a href="text-formatting-2.html">Text Formatting 2</a>
+				</li>
+				<li>
+					<a href="images-1.html">Images 1</a>
+				</li>
+				<li>
+					<a href="images-2.html">Images 2</a>
+				</li>
+				<li>
+					<a href="anchors.html">Anchors</a>
+				</li>
+				<li>
+					<a href="links.html">Links</a>
+				</li>
+				<li>
+					<a href="form-1.html">Form 1</a>
+				</li>
+				<li>
+					<a href="form-2.html">Form 2</a>
+				</li>
+				<li  class="active">
+					<a href="boc-model-1.html">Box Model 1</a>
+				</li>
+				<li>
+					<a href="box-model-2.html">Box Model 2</a>
+				</li>
+			</ul>
+		</div-->
+		<div class="col-md-9 column">
+			<h2>Box Model 1</h2>
+			
+			For this exercise, create an html file in the public/css-exercises folder named <strong>box-model-1.html</strong>. Save your external stylesheet (css file) in public/css folder as <strong>box-model-1.css</strong>.<br><br>
+			
+			In HTML, each element is represented as a rectangular box.
+			In CSS, each of these rectangular boxes is described using the standard box model. This model describes the content of the space taken by an element. It consists of: margin, border, padding, and the actual content.<br><br>			
+			The image below illustrates the box model:<br><br>	
+	
+			<img src="../images/box-model/box-model.gif">
+			
+			<hr/>
+			<!--Parts of the Box Model-->
+			<h4>Parts of the Box Model</h4>
+
+			<table class="table">
+				<tr>
+					<th> Area </th>
+					<th> Description </th>
+				</tr>
+				<tr>
+					<td> <em>content</em> </td>
+					<td> the content of the box, where text and images appear </td>
+				</tr>
+				<tr>
+					<td> <em>padding</em> </td>
+					<td> clears an area around the content; transparent </td>
+				</tr>
+				<tr>
+					<td> <em>border</em> </td>
+					<td> a border that goes around the padding and content </td>
+				</tr>
+				<tr>
+					<td> <em>margin</em> </td>
+					<td> Clears an area outside the border; transparent </td>
+				</tr>
+			</table>
+			
+		
+			<hr/>
+			<!--Example of Box Model-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; border: 25px solid gray; margin: 25px;">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;p> Hooray! The Golden State Warriors won the NBA Finals! &lt;/p></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	/*The box model properties*/
+	padding: 25px;
+	border: 25px solid navy;
+	margin: 25px;
+}</code></pre>
+			</div>
+			
+			<br>
+			<hr/>
+			<!--Padding-->
+			<h4>Padding</h4>
+			The CSS padding properties define the space between the element border and the element content. The padding is affected by the background color of the element. The padding can be controlled using the <code>padding-top</code>, <code>padding-bottom</code>, <code>padding-left</code>, <code>padding-right</code> properties or the shorthand <code>padding</code> CSS property.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; /*border: 25px solid gray; margin: 25px;*/">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	
+	padding-top: 25px;
+	padding-right: 25px;
+	padding-bottom: 25px;
+	padding-left: 25px;
+	/*SAME AS*/
+	padding: 25px;
+}</code></pre>
+			</div>
+			
+			<br>
+			You can specify different padding for each side.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 10px 20px 30px 40px; /*border: 25px solid gray; margin: 25px;*/">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+	/*SAME AS*/
+	padding: 10px 20px 30px 40px;
+	/*first value for top, second for right, third for bottom and fourth for left*/
+}</code></pre>
+			</div>
+			
+			<br>
+			<em>Padding - shorthand property</em><br>
+			The shorthand <code>padding</code> property can have from one to four values.
+			<ul>
+				<li>
+					<code>padding: 25px 50px 75px 100px; </code>
+					<ul>
+						<li>top padding is 25px</li>
+						<li>right padding is 50px</li>
+						<li>bottom padding is 75px</li>
+						<li>left padding is 100px</li>
+					</ul>
+					<br>
+				</li>
+				<li>
+					<code>padding: 25px 50px 75px;</code>
+					<ul>
+						<li>top padding is 25px</li>
+						<li>right and left paddings are 50px</li>
+						<li>bottom padding is 75px</li>
+					</ul>
+					<br>
+				</li>
+				<li>
+					<code>padding: 25px 50px;</code>
+					<ul>
+						<li>top and bottom paddings are 25px</li>
+						<li>right and left paddings are 50px</li>
+					</ul>
+					<br>
+				</li>
+				<li>
+					<code>padding: 25px;</code>
+					<ul>
+						<li>all four paddings are 25px</li>
+					</ul>
+				</li>
+			</ul>
+
+			<br>
+			<hr/>
+			<!--Border-->
+			<h4>Border</h4>
+			The CSS border properties allow you to specify the style, size, and color of an element's border.
+			<br><br>
+			
+			<em>Border-style</em><br>
+			The border-style property specifies what kind of border to display.<br>
+			<strong>Note:</strong> None of the border properties will have ANY effect unless the border-style property is set.<br><br>
+			
+			Different <code>border-style</code> property values:
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="border: 1px none #000000;padding:3px;"><code>none;</code> Defines no border</p>
+					<p style="border: 1px dotted #000000;padding:3px;"><code>dotted;</code> Defines a dotted border</p>
+					<p style="border: 1px dashed #000000;padding:3px;"><code>dashed;</code> Defines a dashed border</p>
+					<p style="border: 1px solid #000000;padding:3px;"><code>solid;</code> Defines a solid border</p>
+					<p style="border: 3px double #000000;padding:3px;"><code>double;</code> Defines two borders. The width of the two borders are the same as the border-width value</p>
+					<p style="border: 5px groove lightblue;padding:3px;"><code>groove;</code> Defines a 3D grooved border. The effect depends on the border-color value</p>
+					<p style="border: 5px ridge lightblue;padding:3px;"><code>ridge;</code> Defines a 3D ridged border. The effect depends on the border-color value</p>
+					<p style="border: 5px inset lightblue;padding:3px;"><code>inset;</code> Defines a 3D inset border. The effect depends on the border-color value</p>
+					<p style="border: 5px outset lightblue;padding:3px;"><code>outset;</code> Defines a 3D outset border. The effect depends on the border-color value</p>
+				</div>
+			</div>
+			
+			<br>
+			<em>Border-width</em><br>
+			The width is set in pixels, or by using one of the three pre-defined values: thin, medium, or thick.<br>
+			<strong>Note:</strong> The "border-width" property does not work if it is used alone. Use the "border-style" property to set the borders first.<br><br>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; border: 5px solid; /*margin: 25px;*/">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	padding: 25px;
+	
+	/*Don't forget to set the border-style property first.*/
+	border-style:solid;
+	border-width:5px;
+}</code></pre>
+			</div>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; border: 25px solid; /*margin: 25px;*/">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	padding: 25px;
+	
+	/*Don't forget to set the border-style property first.*/
+	border-style:solid;
+	border-width:25px;
+}</code></pre>
+			</div>
+			Notice that the color of the border  is black since we did not set it yet.<br><br>
+			
+			<br>
+			<em>Border-color</em><br>
+			The border-color property is used to set the color of the border. The color can be set by:
+			<ul>
+				<li>name - specify a color name, like <code>red</code></li>
+				<li>RGB - specify a RGB value, like <code>rgb(255,0,0)</code></li>
+				<li>Hex - specify a hex value, like <code>#ff0000</code></li>
+			</ul>
+			If the border color is not set it is inherited from the color property of the element.<br>	
+			<strong>Note:</strong> The "border-color" property does not work if it is used alone. Use the "border-style" property to set the borders first.<br><br>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; border: solid gray; /*margin: 25px;*/">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	padding: 25px;
+	
+	/*Don't forget to set the border-style property first.*/
+	border-style:solid;
+	border-color:gray;
+}</code></pre>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; border: 25px solid gray; /*margin: 25px;*/">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	padding: 25px;
+	
+	/*All three border properties together*/
+	border-style:solid;
+	border-width:25px;
+	border-color:gray;
+}</code></pre>
+			</div>
+			
+			<br>
+			<em>Border - shorthand property</em><br>
+			To shorten the code, it is also possible to specify all the individual border properties in one property. This is called a shorthand property.<br>
+			The border property is a shorthand for the following individual border properties:<br>
+			<ul>
+				<li>border-width</li>
+				<li>border-style (required)</li>
+				<li>border-color</li>
+			</ul>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; border: 25px solid gray; /*margin: 25px;*/">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	padding: 25px;
+	
+	/*All three border properties together*/
+	border-style:solid;
+	border-width:25px;
+	border-color:gray;
+	/*EQUIVALENT TO*/
+	border: 25px solid gray;
+}</code></pre>
+			</div>
+				
+			<h4>Other CSS Border Properties</h4>
+			These properties work just like the properties above but for the specific sides of the box.
+			<table class="table">
+			  <tr>
+			    <th>Property</th>
+			    <th>Description</th>
+			  </tr>
+			  <tr>
+			    <td>border-bottom</td>
+			    <td>Sets all the bottom border properties in one declaration</td>
+			  </tr>
+			  <tr>
+			    <td>border-bottom-color</td>
+			    <td>Sets the color of the bottom border</td>
+			  </tr>
+			  <tr>
+			    <td>border-bottom-style</td>
+			    <td>Sets the style of the bottom border</td>
+			  </tr>
+			  <tr>
+			    <td>border-bottom-width</td>
+			    <td>Sets the width of the bottom border</td>
+			  </tr>
+			  <tr>
+			    <td>border-left</td>
+			    <td>Sets all the left border properties in one declaration</td>
+			  </tr>
+			  <tr>
+			    <td>border-left-color</td>
+			    <td>Sets the color of the left border</td>
+			  </tr>
+			  <tr>
+			    <td>border-left-style</td>
+			    <td>Sets the style of the left border</td>
+			  </tr>
+			  <tr>
+			    <td>border-left-width</td>
+			    <td>Sets the width of the left border</td>
+			  </tr>
+			  <tr>
+			    <td>border-right</td>
+			    <td>Sets all the right border properties in one declaration</td>
+			  </tr>
+			  <tr>
+			    <td>border-right-color</td>
+			    <td>Sets the color of the right border</td>
+			  </tr>
+			  <tr>
+			    <td>border-right-style</td>
+			    <td>Sets the style of the right border</td>
+			  </tr>
+			  <tr>
+			    <td>border-right-width</td>
+			    <td>Sets the width of the right border</td>
+			  </tr>
+			  <tr>
+			    <td>border-top</td>
+			    <td>Sets all the top border properties in one declaration</td>
+			  </tr>
+			  <tr>
+			    <td>border-top-color</td>
+			    <td>Sets the color of the top border</td>
+			  </tr>
+			  <tr>
+			    <td>border-top-style</td>
+			    <td>Sets the style of the top border</td>
+			  </tr>
+			  <tr>
+			    <td>border-top-width</td>
+			    <td>Sets the width of the top border</td>
+			  </tr>
+			</table>
+	
+			<hr/>
+			<!--Margin-->
+			<h4>Margin</h4>
+			The margin clears an area around an element (outside the border). The margin does not have a background color, and is completely transparent.<br>
+			The top, right, bottom, and left margin can be changed independently using separate properties. A shorthand <code>margin</code> property can also be used, to change all margins at once.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding: 25px; border: 25px solid gray; margin: 25px;">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	padding: 25px;
+	border: 25px;
+	
+	margin-top: 25px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	margin-left: 25px;
+	/*SAME AS*/
+	margin: 25px;
+}</code></pre>
+			</div>
+			
+			<br>
+			You can also specify different margins for the different sides of an element.
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p style="background-color: lightblue; width: 200px; padding:25px; border: 25px solid gray; margin: 10px 20px 30px 40px;">
+					Hooray! The Golden State Warriors won the NBA Finals!</p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>p{
+	background-color: lightblue;
+	width: 200px;
+	
+	margin-top: 10px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	margin-left: 40px;
+	/*SAME AS*/
+	margin: 10px 20px 30px 40px;
+	/*first value for top, second for right, third for bottom and fourth for left*/
+}</code></pre>
+			</div>
+			
+			<br>
+			<em>Margin - shorthand property</em><br>
+			The shorthand <code>margin</code> property can have from one to four values.
+			<ul>
+				<li>
+					<code>margin: 25px 50px 75px 100px; </code>
+					<ul>
+						<li>top margin is 25px</li>
+						<li>right margin is 50px</li>
+						<li>bottom margin is 75px</li>
+						<li>left margin is 100px</li>
+					</ul>
+					<br>
+				</li>
+				<li>
+					<code>margin: 25px 50px 75px;</code>
+					<ul>
+						<li>top margin is 25px</li>
+						<li>right and left margins are 50px</li>
+						<li>bottom margin is 75px</li>
+					</ul>
+					<br>
+				</li>
+				<li>
+					<code>margin: 25px 50px;</code>
+					<ul>
+						<li>top and bottom margins are 25px</li>
+						<li>right and left margins are 50px</li>
+					</ul>
+					<br>
+				</li>
+				<li>
+					<code>margin: 25px;</code>
+					<ul>
+						<li>all four margins are 25px</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<br>
+			<h4>Margin: <code>auto</code></h4>
+			This margin value is used for centering of blocks.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div class="cent">
+					  Yay! I am at the center. No need for the deprecated &lt;center>&lt;/center> tag!
+					</div>
+					<div class="uncent">
+					  Oops! Can't reach the center. My margin wasn't auto.
+					</div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div class="cent">
+	Yay! I am at the center. No need for the deprecated &lt;center>&lt;/center> tag!
+&lt;/div>
+&lt;div class="uncent">
+	Oops! Can't reach the center. My margin wasn't auto.
+&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.cent {
+	margin: auto;
+	background: lightblue;
+	width: 66%;
+}
+.uncent {
+	margin: 20px;
+	background: lightblue;
+	width: 66%;
+}</code></pre>
+			</div>
+			
+			<!--References-->
+			<h4>References</h4>
+			<ul>
+				<li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box_model">Mozilla Developer Network - Box Model</a> </li>
+				<li> <a href="http://www.w3schools.com/css/css_boxmodel.asp">W3Schools - CSS Box Model</a> </li>
+			</ul>
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" src="../js/ZeroClipboard.min.js"></script>
+<script>
+	//Config ZeroClipboard
+	ZeroClipboard.config({
+		hoverClass: 'btn-clipboard-hover'
+	})
+
+	// Insert copy to clipboard button before .highlight
+	$('.highlight').each(function () {
+		var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>';
+		$(this).before(btnHtml)
+	});
+
+	var zeroClipboard = new ZeroClipboard($('.btn-clipboard'));
+	var htmlBridge = $('#global-zeroclipboard-html-bridge');
+
+	// Handlers for ZeroClipboard
+	zeroClipboard.on('ready', function (event) {
+		htmlBridge
+			.data('placement', 'top')
+			.attr('title', 'Copy to clipboard')
+			.tooltip();
+
+		// Copy to clipboard
+		zeroClipboard.on('copy', function (event) {
+			var highlight = $(event.target).parent().nextAll('.highlight').first();
+			event.clipboardData.setData("text/plain", highlight.text())
+		});
+
+		// Notify copy success and reset tooltip title
+		zeroClipboard.on('aftercopy', function () {
+			htmlBridge
+				.attr('title', 'Copied!')
+				.tooltip('fixTitle')
+				.tooltip('show')
+				.attr('title', 'Copy to clipboard')
+				.tooltip('fixTitle')
+		});
+	});
+
+	// Notify copy failure
+	zeroClipboard.on('error', function () {
+		ZeroClipboard.destroy();
+		htmlBridge
+			.attr('title', 'Flash required')
+			.tooltip('fixTitle')
+			.tooltip('show');
+	});
+</script>
+
+</body>
+</html>

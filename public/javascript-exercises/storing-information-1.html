@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="/css/materialize.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/github-gist.css">
+	<link rel="stylesheet" href="../css/github-gist.css">
+	
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<h2>Storing Information</h2>
+			Your file for this exercise should be saved in the public folder and should be accessed using this link: <strong>"/javascript-exercises/storing-information-1.html"</strong>. Include all the scripts using an <strong>external file</strong> that should be accessed using this link: <strong>"/script/storing-information-1.js"</strong>.
+			
+			<br/> <br/>
+			
+			<hr/>
+			<!--LINK-->
+			<div class="card-panel grey lighten-3">
+				<h5>First off</h5>
+				Link your javascript file to your web page.
+				<div class="highlight"><pre class="html"><code>&lt;!--Put this before the closing &lt;/body> tag:--><br>&lt;script src="script/storing-information-1.js">&lt;/script></code></pre>
+				</div>
+			</div>
+			
+			<br>
+			<!--Variables-->
+			<h4>Variables</h4>
+			JavaScript variables are containers for storing data values.
+
+            In this example, x, y, and z, are variables:
+
+            <!--DEMO1-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo1"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo1">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var x = 5;
+var y = 6;
+var z = x + y;
+document.getElementById("demo1").innerHTML = z;</code></pre>
+				</div>
+			</div>
+			
+			Notice the output "11" in the above example. This was caused by the assignment of the value stored in "z" to the content of paragraph "demo1".<br><br>
+			
+            All JavaScript <strong>variables</strong> must be <strong>identified</strong> with <strong>unique names</strong>. These unique names are called <strong>identifiers</strong>.<br>
+            
+            Identifiers can be short names (like x and y), or more descriptive names (age, sum, totalVolume). The general rules for constructing names for variables (unique identifiers) are:
+            <ul style="text-indent:40px;">
+              <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+              <li>Names must begin with a letter</li>
+              <li>Names can also begin with $ and _ (but we will not use it in this tutorial)</li>
+              <li>Names are case sensitive (y and Y are different variables)</li>
+              <li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+            </ul>
+            
+            <br>
+            <!--Declare-->
+			<h4>Declaring (Creating) Variables</h4>
+            Creating a variable in JavaScript is called "declaring" a variable. You declare a JavaScript variable with the var keyword:<br>
+
+            <!--var1-->
+			<div class="card-panel grey lighten-3">
+				<div class="highlight"><pre class="javascript"><code>var name;</code></pre>
+				</div>
+			</div>
+            After the declaration, the variable has no value. (Technically it has the value of undefined). To assign a value to the variable, use the equal sign:<br>
+            
+            <!--var2-->
+			<div class="card-panel grey lighten-3">
+				<div class="highlight"><pre class="javascript"><code>name = "Tiffany";</code></pre>
+				</div>
+			</div>
+            You can also assign a value to the variable when you declare it:<br>
+           
+            <!--var3-->
+			<div class="card-panel grey lighten-3">
+				<div class="highlight"><pre class="javascript"><code>var name = "Tiffany";</code></pre>
+				</div>
+			</div>
+
+            In the following example, we create a variable called name and assign the value "Tiffany" to it. Then we "output" the value inside an HTML paragraph with id="demo2":
+
+            <!--DEMO2-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo2"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo2">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var name = "Tiffany";
+document.getElementById("demo2").innerHTML = name;</code></pre>
+				</div>
+			</div>
+			
+			<br>
+            It's a good programming practice to declare all variables at the beginning of a script.<br>
+            You can declare many variables in one statement. Start the statement with var and separate the variables by comma:<br>
+            
+            <!--var4-->
+			<div class="card-panel grey lighten-3">
+				<div class="highlight"><pre class="javascript"><code>var name = "Tiffany", course = "BS Biology", gwa = 1.004;</code></pre>
+				</div>
+			</div>
+            
+            In computer programs, variables are often declared without a value. The value can be something that has to be calculated, or something that will be provided later, like user input. A variable declared without a value will have the value <strong>undefined</strong>.<br>
+
+			<hr>
+			<!--Data Types-->
+			<h4>Data Types</h4>
+			JavaScript variables can hold numbers like 1.004, and text values like "BS Biology". In programming, text values are called text strings. Strings are written inside double or single quotes. Numbers are written without quotes. If you put quotes around a number, it will be treated as a text string.<br>
+			Aside from numbers and strings, variables can hold other data types: booleans, arrays, objects.
+			
+			<!--data types1-->
+			<div class="card-panel grey lighten-3">
+				<div class="highlight"><pre class="javascript"><code>var score = 16;                                      // Number
+var lastName = "Binay";                              // String
+var guilty = true;                                   // Boolean
+var pets = ["cat", "dog", "duck"];                   // Array
+var person = {firstName:"Grace", lastName:"Poe"};    // Object
+</code></pre>
+				</div>
+			</div>
+			
+			In programming, data types is an important concept. To be able to operate on variables, it is important to know something about the type.<br><br>
+            
+            <strong>JavaScript Has Dynamic Types</strong><br>
+            This means that the same variable can be used as different types:
+            
+            <!--data types2-->
+			<div class="card-panel grey lighten-3">
+				<div class="highlight"><pre class="javascript"><code>var x;           // Now x is undefined
+x = 5;           // Now x is a Number
+x = "John";      // Now x is a String
+</code></pre>
+				</div>
+			</div>
+			
+			<h5>Strings</h5>
+            A string (or a text string) is a series of characters like "Grace Poe". Strings are written with quotes. You can use single or double quotes:
+            
+            <!--strings1-->
+			<div class="card-panel grey lighten-3">
+				<div class="highlight"><pre class="javascript"><code>var minion = "Bob";    // Using double quotes
+var minion = 'Bob';    // Using single quotes
+</code></pre>
+				</div>
+			</div>
+			
+			You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+            
+            <!--strings2-->
+			<div class="card-panel grey lighten-3">
+				<div class="highlight"><pre class="javascript"><code>var answer = "It's alright";          // Single quote inside double quotes
+var answer = "He is called 'Gru'";    // Single quotes inside double quotes
+var answer = 'He is called "Gru"';    // Double quotes inside single quotes
+</code></pre>
+				</div>
+			</div>
+			
+			<strong>String Length</strong><br>
+            The length of a string is found in the built in property length:
+            <!--DEMO3-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo3"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo3">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo3").innerHTML = txt.length;</code></pre>
+				</div>
+			</div>
+            
+            <strong>Combining Strings</strong><br>
+            The plus (+) operator combines two strings together:
+            <!--DEMO4-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo4"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo4">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+document.getElementById("demo4").innerHTML = "Hello" + " World!";</code></pre>
+				</div>
+			</div>
+            
+      <strong>The escape character</strong><br>
+      The escape character (\) is used to insert special characters in a string. This is the list of special characters that can be added to a text string with the backslash sign:
+      
+      <table>
+          <tr>
+            <th>Code</th>
+            <th>Outputs</th>
+          </tr>
+          <tr>
+            <td>\'</td>
+            <td>single quote</td>
+          </tr>
+          <tr>
+            <td>\&quot;</td>
+            <td>double quote</td>
+          </tr>
+          <tr>
+            <td>\\</td>
+            <td>backslash</td>
+          </tr>
+          <tr>
+            <td>\n</td>
+            <td>new line</td>
+          </tr>
+          <tr>
+            <td>\r</td>
+            <td>carriage return</td>
+          </tr>
+          <tr>
+            <td>\t</td>
+            <td>tab</td>
+          </tr>
+          <tr>
+            <td>\b</td>
+            <td>backspace</td>
+          </tr>
+          <tr>
+            <td>\f</td>
+            <td>form feed</td>
+          </tr>
+      </table>
+            
+            <!--DEMO5-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo5"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo5">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+document.getElementById("demo5").innerHTML = "Hello \"World\"!";</code></pre>
+				</div>
+			</div>
+			
+            <h5>Numbers</h5>
+            JavaScript has only one type of numbers. Numbers can be written with, or without decimals:
+            
+            <!--numbers-->
+			<div class="card-panel grey lighten-3">
+				<div class="highlight"><pre class="javascript"><code>var age = 7;
+var fare = 7.00;
+</code></pre>
+				</div>
+			</div>
+			
+			<h5>Booleans</h5>
+            Booleans can only have two values: true or false.
+            
+            <!--boolean-->
+			<div class="card-panel grey lighten-3">
+				<div class="highlight"><pre class="javascript"><code>var x = true;
+var y = false;
+</code></pre>
+				</div>
+			</div>
+            Booleans are often used in conditional testing. You will learn more about conditional testing later in the following tutorials.
+
+            <h5>Arrays</h5>
+            JavaScript arrays are written with square brackets. Array items are separated by commas. The following code declares (creates) an array called cars, containing three items (pets):
+
+            <!--DEMO6-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo6"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo6">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var pets = ["cat", "dog", "duck"];
+document.getElementById("demo6").innerHTML = pets[0];</code></pre>
+				</div>
+			</div>
+            Array indexes are zero-based, which means the first item is [0], second is [1], and so on which is why "cat" is displayed as our output.
+            
+            <h5>Objects</h5>
+            JavaScript objects are written with curly braces. Object properties are written as name: value pairs, separated by commas.
+
+            <!--DEMO7-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo7"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo7">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var person = {firstName:"Grace", lastName:"Poe", age:46};
+document.getElementById("demo7").innerHTML = person.firstName + " is " + person.age + " years old.";</code></pre>
+				</div>
+			</div>
+            The object (person) in the example above has 3 properties: firstName, lastName, and age.
+
+            <hr>
+            <h4>String Methods</h4>
+            String methods help you to work with strings.
+            
+            <h5>Extracting String Parts</h5>
+            There are 3 methods for extracting a part of a string:
+            <ul style="text-indent:40px;">
+              <li>slice(start, end)</li>
+              <li>substring(start, end)</li>
+              <li>substr(start, length)</li>
+            </ul>
+            
+            <strong>The slice() Method</strong><br>
+            slice() extracts a part of a string and returns the extracted part in a new string. The method takes 2 parameters: the starting index (position), and the ending index (position). This example slices out a portion of a string from position 7 to position 13:
+            
+            <!--DEMO8-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo8"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo8">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var str = "Apple, Banana, Kiwi";
+document.getElementById("demo8").innerHTML = str.slice(7,13);</code></pre>
+				</div>
+			</div>
+            JavaScript counts positions from zero. 0 is the first position in a string, 1 is the second, 2 is the third ...
+            
+            <br><br>
+            If you omit the second parameter, the method will slice out the rest of the string:
+            <!--DEMO9-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo9"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo9">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+document.getElementById("demo9").innerHTML = str.slice(7);</code></pre>
+				</div>
+			</div>
+			
+			<strong>The substring() Method</strong><br>
+			substring() is similar to slice(). The difference is that substring() cannot accept negative indexes, slice() can.<br><br>
+			
+			<strong>The substr() Method</strong><br>
+			substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part.
+			
+			<!--DEMO10-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo10"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo10">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var str = "Apple, Banana, Kiwi";
+document.getElementById("demo10").innerHTML = str.substr(7,6);</code></pre>
+				</div>
+			</div>
+			If you omit the second parameter, substr() will slice out the rest of the string.
+			
+			<h5>Replacing String Content</h5>
+			<strong>The replace() method</strong> replaces a specified value with another value in a string:
+			
+			<!--DEMO11-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo11">You're with your ex.</p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo11">You're with your ex.&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var str = document.getElementById("demo11").innerHTML; 
+var txt = str.replace("ex","someone new");
+document.getElementById("demo11").innerHTML = txt;</code></pre>
+				</div>
+			</div>
+			
+			Notice that in the HTML code, we have the string "You're with your ex". Using the string method replace() in JavaScript, we replaced "ex" with "someone new" that reflected in our output.
+			
+			<h5>Converting to Upper and Lower Case</h5>
+			A string is converted to upper case with <strong>toUpperCase()</strong>:
+			
+			<!--DEMO12-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo12">When tomorrow comes I'll be on my own.</p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo12">When tomorrow comes I'll be on my own.&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var text = document.getElementById("demo12").innerHTML;
+document.getElementById("demo12").innerHTML = text.toUpperCase();</code></pre>
+				</div>
+			</div>
+			
+			A string is converted to lower case with <strong>toLowerCase()</strong>:
+			
+			<!--DEMO13-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo13">WHEN TOMORROW COMES. TOMORROW COMES. TOMORROW COMES.</p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo13">WHEN TOMORROW COMES. TOMORROW COMES. TOMORROW COMES.&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var text = document.getElementById("demo13").innerHTML;
+document.getElementById("demo13").innerHTML = text.toLowerCase();</code></pre>
+				</div>
+			</div>
+			
+			<h5>The concat() Method</h5>
+			<strong>concat()</strong> joins two or more strings:
+			
+			<!--DEMO14-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo14"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo14">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var lyrics1 = "I got all I need";
+var lyrics2 = " when I got you and I.";
+document.getElementById("demo14").innerHTML = lyrics1.concat(lyrics2);</code></pre>
+				</div>
+			</div>
+			
+			The concat() method can be used alternatively with the plus operator.<br>	
+			<strong>Remember:</strong> All string methods return a new string. They don't modify the original string.
+			
+			<h5>The charAt() Method</h5>
+			The charAt() method returns the character at a specified index (position) in a string:
+			
+			<!--DEMO15-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo15"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo15">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var str = "HELLO WORLD";
+document.getElementById("demo15").innerHTML = str.charAt(0);</code></pre>
+				</div>
+			</div>
+			
+			<h5>Converting a String to an Array</h5>
+			A string can be converted to an array with the <strong>split()</strong> method:
+			<!--DEMO16-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo16"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo16">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var str = "r|e|a|d";
+var arr = str.split("|");
+document.getElementById("demo16").innerHTML = arr[0];</code></pre>
+				</div>
+			</div>
+			The separator ("|") supplied in the function is used to split the string. If the separator is omitted, the returned array will contain the whole string in index [0]. If the separator is "", the returned array will be an array of single characters.<br><br>
+			
+			Below is the complete list of string methods:
+			
+      <table>
+        <tr>
+          <th style="width:24%">Method</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>charAt()</td>
+          <td>Returns the character at the specified index (position)</td>
+        </tr>
+        <tr>
+          <td>charCodeAt()</td>
+          <td>Returns the Unicode of the character at the specified 
+      	index</td>
+        </tr>
+        <tr>
+          <td>concat()</td>
+          <td>Joins two or more strings, and returns a copy of the joined strings</td>
+        </tr>
+        <tr>
+          <td>fromCharCode()</td>
+          <td>Converts Unicode values to characters</td>
+        </tr>
+        <tr>
+          <td>indexOf()</td>
+          <td>Returns the position of the first found occurrence of a specified value in a string</td>
+        </tr>
+        <tr>
+          <td>lastIndexOf()</td>
+          <td>Returns the position of the last found occurrence of a specified value 
+      	in a string</td>
+        </tr>
+        <tr>
+          <td>localeCompare()</td>
+          <td>Compares two strings in the current locale</td>
+        </tr>
+        <tr>
+          <td>match()</td>
+          <td>Searches a string for a match against a regular expression, and returns 
+      	the matches</td>
+        </tr>
+        <tr>
+          <td>replace()</td>
+          <td>Searches a string for a value and 
+      	returns a new string with the value replaced</td>
+        </tr>
+        <tr>
+          <td>search()</td>
+          <td>Searches a string for a value and 
+      	returns the position of the match</td>
+        </tr>
+        <tr>
+          <td>slice()</td>
+          <td>Extracts a part of a string and returns a new string</td>
+        </tr>
+        <tr>
+          <td>split()</td>
+          <td>Splits a string into an array of substrings</td>
+        </tr>
+        <tr>
+          <td>substr()</td>
+          <td>Extracts a part of a string from a start 
+      	position through a number of characters</td>
+        </tr>
+        <tr>
+          <td>substring()</td>
+          <td>Extracts a part of a string between two specified positions</td>
+        </tr>
+        <tr>
+          <td>toLocaleLowerCase()</td>
+          <td>Converts a string to lowercase letters, according to the host's locale</td>
+        </tr>
+        <tr>
+          <td>toLocaleUpperCase()</td>
+          <td>Converts a string to uppercase letters, according to the host's locale</td>
+        </tr>
+        <tr>
+          <td>toLowerCase()</td>
+          <td>Converts a string to lowercase letters</td>
+        </tr>
+        <tr>
+          <td>toString()</td>
+          <td>Returns the value of a String object</td>
+        </tr>
+        <tr>
+          <td>toUpperCase()</td>
+          <td>Converts a string to uppercase letters</td>
+        </tr>
+        <tr>
+          <td>trim()</td>
+          <td>Removes whitespace from both ends of a string</td>
+        </tr>
+        <tr>
+          <td>valueOf()</td>
+          <td>Returns the primitive value of a String object</td>
+        </tr>
+      </table>
+			
+			<hr>
+			<h4>Capturing Form Input</h4>
+			JavaScript can be used to get the value of elements in a form.
+
+
+			<!--DEMO17-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<label> First name: <input type="text" name="fname" id="fname" value="Johny"></label> <br>
+					<label> Last name: <input type="text" name="lname" id="lname" value="Bravo"></label>
+					<p id="demo17"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;label> First name: &lt;input type="text" name="fname" id="fname">&lt;/label> &lt;br>
+&lt;label> Last name: &lt;input type="text" name="lname" id="lname">&lt;/label>
+&lt;p id="demo17">&lt;/p></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var fname = document.getElementById("fname");
+var lname = document.getElementById("lname");
+
+&lt;!--You can join strings and html tags too!-->
+&lt;!--Tags should be inside double/singe quotes while variables are as is-->
+document.getElementById("demo17").innerHTML = fname.value + "&lt;br>" + lname.value; </code></pre>
+				</div>
+			</div>
+			
+			The value of the text fields are captured and stored in the variables fname and lname then displayed to the demo paragraph. This will be useful when you learn to use button events and functions where you can change the value in the input fields and see the changes in the output.
+			
+			<hr>
+			<h4>Dates</h4>
+			The Date object lets you work with dates (years, months, days, hours, minutes, seconds, and milliseconds).
+			
+			<!--DEMO18-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo18"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo18"></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var d = new Date();
+document.getElementById("demo18").innerHTML = d;</code></pre>
+				</div>
+			</div>
+			
+			You can make the date more readable by using the <strong>toDateString()</strong> method.
+			<!--DEMO19-->
+			<div class="card-panel grey lighten-3">
+				<h5>Try This Example !</h5>
+				<hr/>
+				<div>
+					<p id="demo19"></p>
+				</div>
+				<div class="highlight"><pre class="html"><code>&lt;!--In your HTML file:-->
+&lt;p id="demo19"></code></pre>
+				</div>
+				<div class="highlight"><pre class="javascript"><code>//Inside the JS file:
+var d = new Date();
+document.getElementById("demo19").innerHTML = d.toDateString();</code></pre>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<hr/>
+			<!--References-->
+			<h4>References</h4>
+			<ul>
+				<li><a href="http://www.w3schools.com/js/js_variables.asp">JavaScript Variables</a> </li>
+				<li><a href="http://www.w3schools.com/js/js_strings.asp">JavaScript Strings</a></li>
+			</ul>
+		</div><!--col-md-12-->
+	</div><!--end of row-->
+</div>
+
+<script src="/js/storing-information.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/js/materialize.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

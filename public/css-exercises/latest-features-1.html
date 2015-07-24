@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/github-gist.css">
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<style>
+	    h1{
+	        text-align:center;
+	        padding:20px 0;
+	        font-size:60px;
+	    }
+	    .ex1{
+	        text-shadow: 2px 2px;
+	    }
+	    .ex2{
+	        text-shadow: 3px 3px purple;
+	    }
+	    .ex3{
+	        text-shadow: 2px 2px 5px purple;
+	    }
+	    .ex4{
+	        color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+	    }
+	    .ex5{
+	        background-color: #3a50d9;
+            color: #e0eff2;
+            font: italic bold 90px Georgia, Serif;
+            text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27;
+	    }
+	    .ex6{
+	        border:1px solid black;
+	        box-shadow: 10px 10px;
+	    }
+	    .ex7{
+	        border:1px solid black;
+	        box-shadow: 10px 10px gray;
+	    }
+	    .ex8{
+	        border:1px solid black;
+	        box-shadow: 10px 10px 10px gray;
+	    }
+	    .ex9{
+	        border:1px solid black;
+	        box-shadow: 8px 5px 6px -6px darkblue, 8px 8px 6px -6px blue;
+	    }
+	    .ex10{
+	        border:1px solid black;
+	        box-shadow: inset 0 0 10px #000000;
+	    }
+	    .box-1{
+	        width:100px;
+	        height:100px;
+	        background-color:#BADA55;
+	    }
+	    #ex11{
+	        border-radius: 10px;
+	    }
+	    #ex12{
+	        border-radius: 20px;
+            background: url(http://wdl.tmimgcdn.com/img_articles/14881/site-background-pattern-07.jpg); /* will get clipped */
+	    }
+	    #ex13{
+	        border-radius: 5px 40px 5px;
+	    }
+	    #ex14{
+	        border-radius: 10px/30px;
+	    }
+	    #ex15{
+	        border-radius: 30px/10px;
+	    }
+	    #ex16{
+	        border-radius: 50%;
+	    }
+	    #ex17{
+	        border-radius: 50%;
+	        width:200px;
+	    }
+	    .box-2{
+	        width:100px;
+	        height:100px;
+	        border:1px solid black;
+	    }
+	    #grad1{
+	        background: linear-gradient(to bottom, blue, white); /*creates a horizontal gradient fading from blue to white*/
+	    }
+	    #grad2{
+	        background: linear-gradient(to right, blue, white);  /*creates a gradient fading from left to right*/
+	    }
+	    #grad3{
+	        background: linear-gradient(to bottom right, blue, white); /*creates a diagonal gradient*/
+	    }
+	    #grad4{
+	        background: linear-gradient(70deg, black, white); /*creates a gradient with 70degrees*/
+	    }
+	    #grad5{
+	        background: linear-gradient(to right, #f6f1d3, #648880, #293f50);
+	    }
+	    #grad6{
+	        background: linear-gradient(to right, #f6f1d3, #648880 85%, #293f50);
+	    }
+	    #grad7{
+	        background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), url('http://coolchaser-static.coolchaser.com/images/themes/t/411346-i326.photobucket.com-albums-k436-JesusBear3-blue_black_swirljpeg.jpg');
+	    }
+	    #grad8{
+	        background: radial-gradient(#648880, #293f50);
+	    }
+	    @font-face {
+			font-family: "Bitstream Vera Serif";
+			src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+		}
+		#font1{
+			font-family: "Bitstream Vera Serif", serif;
+		}
+		#font2{
+			font-family: "Indie Flower", cursive;
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	
+		<div class="col-md-9 column">
+			<h2>Designing with Latest Features</h2>
+			For this exercise, create an html file in the public/css-exercises folder named <strong>latest-features-1.html</strong>. Save your external stylesheet (css file) in public/css folder as <strong>latest-features-1.css</strong>.<br><br>
+			
+			<!--Text Shadows-->
+			<h3>Text Shadows</h3>
+			The <code>text-shadow</code> property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text.<br><br>
+			
+			<div class="highlight"><pre class="prettyprint"><code>/*Syntax - Do not copy*/<br>text-shadow: [h-shadow] [v-shadow] [blur-radius] [color];</code></pre>
+			</div>
+			
+			<br>
+			<hr/>
+			<!--Text-shadow property values-->
+			<h4>Text-shadow property values</h4>
+
+			<table class="table">
+				<tr>
+					<th> Value </th>
+					<th> Description </th>
+				</tr>
+				<tr>
+					<td> <em>h-shadow</em> </td>
+					<td> Required. The position of the horizontal shadow. A negative value places the shadow to the left of the text. </td>
+				</tr>
+				<tr>
+					<td> <em>v-shadow</em> </td>
+					<td> Required. The position of the vertical shadow. A negative value places the shadow above the text. </td>
+				</tr>
+				<tr>
+					<td> <em>blur-radius</em> </td>
+					<td> Optional. Default value is 0. The higher this value, the bigger the blur; the shadow becomes wider and lighter. </td>
+				</tr>
+				<tr>
+					<td> <em>color</em> </td>
+					<td> Optional. The color of the shadow. </td>
+				</tr>
+			</table>
+			
+			<!--Example 1-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h1 class="ex1">Not-so-appealing shadow</h1>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h1 class="ex1">Not-so-appealing shadow&lt;/h1></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.ex1{
+    text-shadow: 2px 2px;
+}</code></pre>
+			</div>
+			
+			<!--Example 2-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h1 class="ex2">Shadow with color</h1>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h1 class="ex2">Shadow with color&lt;/h1></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.ex2{
+    text-shadow: 3px 3px purple;
+}</code></pre>
+			</div>
+			
+			<!--Example 3-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h1 class="ex3">Shadow with blur</h1>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h1 class="ex3">Shadow with blur&lt;/h1></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.ex3{
+    text-shadow: 2px 2px 5px purple;
+}</code></pre>
+			</div>
+			
+			<!--Example 4-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h1 class="ex4">Multiple shadows</h1>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h1 class="ex4">Multiple shadows&lt;/h1></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.ex4{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}</code></pre>
+			</div>
+			
+			<!--Example 5-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h1 class="ex5">Love, Mom</h1>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h1 class="ex5">Love, Mom&lt;/h1></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.ex5{
+    background-color: #3a50d9;
+    color: #e0eff2;
+    font: italic bold 90px Georgia, Serif;
+    text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27;
+}</code></pre>
+			</div>
+			
+			<br>
+			<!--Box Shadows-->
+			<h3>Box Shadows</h3>
+			The CSS3 <code>box-shadow</code> property applies shadow to elements.
+			
+			The syntax of box-shadow is almost the same with text-shadow's except for an additional value [spread]. The spread radius is optional. Positive values increase the size of the shadow, negative values decrease the size. Default is 0.<br><br>
+			<div class="highlight"><pre class="prettyprint"><code>/*Syntax - Do not copy*/<br>box-shadow: [h-shadow] [v-shadow] [blur-radius] [spread] [color];</code></pre>
+			</div>
+			
+			<!--Example 6-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h1 class="ex1 ex6">Plain shadow</h1>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h1 class="ex1 ex6">Plain shadow&lt;/h1></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.ex6{
+    border:1px solid black;
+    box-shadow: 10px 10px;
+}</code></pre>
+			</div>
+			
+			<br><br>
+			For the best possible browser support, you should prefix with <code>-webkit-</code> and <code>-moz-</code>:
+			<!--Example 7-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h1 class="ex2 ex7">Shadow with color</h1>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h1 class="ex2 ex7">Shadow with color&lt;/h1></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.ex7{
+    border:1px solid black;
+    
+    -webkit-box-shadow: 10px 10px gray; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 10px 10px gray; /* Firefox 3.5 - 3.6 */
+    box-shadow: 10px 10px gray; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}</code></pre>
+			</div>
+			
+			<!--Example 8-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h1 class="ex3 ex8">Shadow with blur</h1>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h1 class="ex3 ex8">Shadow with blur&lt;/h1></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.ex8{
+    border:1px solid black;
+    box-shadow: 10px 10px 10px gray;
+}</code></pre>
+			</div>
+			
+			<!--Example 9-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h1 class="ex4 ex9">Multiple shadows</h1>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h1 class="ex4 ex9">Multiple shadows&lt;/h1></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.ex9{
+    border:1px solid black;
+    box-shadow: 8px 5px 6px -6px darkblue, 8px 8px 6px -6px blue;
+}</code></pre>
+			</div>
+			
+			<!--Example 10-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h1 class="ex5 ex10">Love, Mom</h1>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h1 class="ex5 ex10">Love, Mom&lt;/h1></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>/*To display an inner shadow, add inset before the other values*/
+.ex10{
+    border:1px solid black;
+    box-shadow: inset 0 0 10px #000000;
+}</code></pre>
+			</div>
+			   
+            <br>
+			<!--Border Radius-->
+			<h3>Border Radius</h3>
+			You can give any element "rounded corners" by applying a border-radius through CSS.
+			
+			<!--Example 11-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="ex11" class="box-1"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="ex11" class="box-1">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>/*Box properties for all the examples in border-radius*/
+.box-1{
+    width:100px;
+    height:100px;
+    background-color:#BADA55;
+}
+#ex11{
+    border-radius: 10px;
+}</code></pre>
+			</div>
+			
+			<br>
+			If the element has an image background, it will be clipped at the rounded corner naturally:
+			
+			<!--Example 12-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="ex12" class="box-1"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="ex12" class="box-1">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#ex12{
+    border-radius: 20px;
+    background: url(http://wdl.tmimgcdn.com/img_articles/14881/site-background-pattern-07.jpg); 
+}
+</code></pre>
+			</div>
+			
+			<br>
+			With just one value, <code>border-radius</code> will be the same on all four corners of an element. But that need not be the case. You can specifiy each corner separatedly if you wish.
+			
+			You can also specify two or three values:
+            <ul>
+                <li>If one value is set, this radius applies to <em>all 4 corners</em>.</li>
+                <li>If two values are set, the <em>first</em> applies to <code>top-left</code> and <code>bottom-right</code> corner, the <code>second</code> applies to <code>top-right</code> and <code>bottom-left</code> corner.</li>
+                <li>Four values apply to the <code>top-left</code>, <code>top-right</code>, <code>bottom-right</code>, <code>bottom-left</code> corner in that order.</li>
+                <li>Three values: The second value applies to <code>top-right</code> and also <code>bottom-left</code>.</li>
+            </ul>
+            <br><br>
+            
+			<!--Example 13-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="ex13" class="box-1"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="ex13" class="box-1">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#ex13{
+    border-radius: 5px 40px 5px;
+}
+</code></pre>
+			</div>
+			
+			<br>
+			You may also specify the radiuses in which the corner is rounded by. In other words, the rounding doesn't have to be perfectly circular, it can be elliptical. This is done using a slash ("/") between two values.<br><br>
+			
+			<!--Example 14 and 15-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="ex14" class="box-1" style="float:left"></div>
+					<div id="ex15" class="box-1" style="margin-left:110px"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="ex14" class="box-1">&lt;/div><br>&lt;div id="ex15" class="box-1">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#ex14{
+    border-radius: 10px/30px; /* horizontal radius / vertical radius */
+}
+#ex15{
+    border-radius: 30px/10px; /* horizontal radius / vertical radius */
+}
+</code></pre>
+			</div>
+			
+			<br>
+			You may specify the value of border-radius in percentages. This is particularly useful when wanting to create a circle or elipse shape, but can be used any time you want the border radius to be directly correlated with the elements width.<br><br>
+			
+			<!--Example 16 and 17-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="ex16" class="box-1" style="float:left"></div>
+					<div id="ex17" class="box-1" style="margin-left:110px"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="ex16" class="box-1">&lt;/div><br>&lt;div id="ex17" class="box-1">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#ex16{
+    border-radius: 50%;
+}
+#ex17{
+    border-radius: 50%;
+    width:200px;
+}</code></pre>
+			</div>
+			
+			<br><br>
+			<!--Gradients-->
+			<h3>Gradients</h3>
+			CSS3 gradients let you display smooth transitions between two or more specified colors.<br><br>
+
+            Earlier, you had to use images for these effects. However, by using CSS3 gradients you can reduce download time and bandwidth usage. In addition, elements with gradients look better when zoomed, because the gradient is generated by the browser.<br><br>
+			
+			Browsers support two types of gradients: linear, defined with the linear-gradient() function, and radial, defined with radial-gradient().<br><br>
+			
+			<h4>Linear Gradients</h4>
+            			
+            To create a linear gradient, you set a starting point and a direction (specified as an angle) along which the gradient effect is applied. You also define color stops. Color stops are the colors you want Gecko to render smooth transitions among, and you must specify at least two of them, but can specify more to create more complex gradient effects.<br><br>
+            
+            <em>Simple linear gradients</em><br>
+            
+            <!--Simple 1-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="grad1" class="box-2"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="grad1" class="box-2">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>/*Box properties for all the examples in gradients*/
+.box-2{
+    width:100px;
+    height:100px;
+    border:1px solid black;
+}
+#grad1{
+    /*creates a horizontal gradient fading from blue to white*/
+    background: linear-gradient(to bottom, blue, white); 
+}
+</code></pre>
+			</div>
+			
+            <!--Simple 2-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="grad2" class="box-2"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="grad2" class="box-2">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#grad2{
+	/*creates a gradient fading from left to right*/
+    background: linear-gradient(to right, blue, white); 
+}
+</code></pre>
+			</div>
+            
+            <br>
+            You can make the gradient run diagonally by specifying both the horizontal and vertical starting positions.<br>
+            
+            <!--Degrees-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="grad3" class="box-2"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="grad3" class="box-2">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#grad3{
+     /*creates a diagonal gradient*/
+    background: linear-gradient(to bottom right, blue, white);
+}
+</code></pre>
+			</div>
+			
+			<br>
+			<em>Using angles</em><br><br>
+            If you don't specify an angle, one is determined automatically based on the given di v rection. If you'd like more control over the direction of the gradient, you can set the angle specifically.<br>
+            
+            <!--Using Angles-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="grad4" class="box-2"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="grad4" class="box-2">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#grad4{
+    /*creates a gradient with 70 degrees*/
+    background: linear-gradient(70deg, black, white); 
+}
+</code></pre>
+			</div>
+			
+			The angle is specified as an angle between a horizontal line and the gradient line, going counter-clockwise. In other words, 0deg creates a vertical gradient from the bottom to the top, while 90deg generates a left to right horizontal gradient.<br><br>
+			
+			<em>Color Stops</em><br><br>
+            At a minimum, gradient backgrounds will transition from one color to another; however, we may add multiple colors to a gradient and have the browser transition between all of them. To do this we’ll add color stops to the given gradient function, with commas separating each color stop from the next.<br>
+            
+            <!--Color Stops 1-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="grad5" class="box-2"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="grad5" class="box-2">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#grad5{
+    background: linear-gradient(to right, #f6f1d3, #648880, #293f50);
+}
+</code></pre>
+			</div>
+			
+			<br>
+			By default, the browser will position every color stop an equal distance from the next and will transition between them accordingly. If more control over how colors are positioned is desired, a location along the gradient may be identified for each color stop. The location should be declared as a length value and should fall after the color value.<br><br>
+			
+            <!--Color Stops 2-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="grad6" class="box-2"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="grad6" class="box-2">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code></code>#grad6{
+    background: linear-gradient(to right, #f6f1d3, #648880 85%, #293f50);
+}
+</pre>
+			</div>
+			
+			Unless specified otherwise, the first color stop will be positioned at 0%, and the last color stop will be positioned at 100%.<br><br>
+			
+			<em>Transparency and gradients</em><br><br>
+			Gradients support transparency. You can use this, for example, when stacking multiple backgrounds, to create fading effects on background images.
+            
+            <!--Transparency-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="grad7" class="box-2"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="grad7" class="box-2">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#grad7{
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), url('http://coolchaser-static.coolchaser.com/images/themes/t/411346-i326.photobucket.com-albums-k436-JesusBear3-blue_black_swirljpeg.jpg');
+}
+</code></pre>
+			</div>
+			
+			The backgrounds are stacked with the first specified background on top, and each successive background farther away. By stacking backgrounds this way, you can create very creative effects as seen above.<br>
+			
+			<br>
+			<em>Radial gradients</em><br><br>
+            While the linear gradient is perfect for a gradient moving from one direction to another, often the need for a radial gradient arises. Radial background gradients work just like linear gradients and share many of the same values. For radial gradients, instead of using the linear-gradient() function within the background or background-image property, we’ll use the radial-gradient() function.<br><br>
+            
+            <!--Radial-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div id="grad8" class="box-2"></div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="grad8" class="box-2">&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#grad8{
+    background: radial-gradient(#648880, #293f50);
+}</code></pre>
+			</div>
+            
+            <br>
+            Radial gradients work from the inside to the outside of an element. Thus, the first color identified within the radial-gradient() function will sit in the absolute center of the element, and the second color will sit on the outside of an element. The browser will then create the transition between the two colors.
+            
+			<!--Web Fonts with @font-face-->
+			<h3>Web Fonts with @font-face</h3>
+			
+			<h4>Using Web-safe Fonts</h4>
+			By default there are a few fonts that are pre-installed on every computer, tablet, smart-phone, or other web-browsing-capable device. Because they’ve been installed on every device, we can use these fonts freely within our websites, knowing that no matter what device is browsing our site, the font will render properly. These fonts have become known as “web-safe fonts.” There are only a handful of them, and the safest of the web-safe fonts are listed here:
+			
+			<ul>
+			    <li>Arial</li>
+                <li>Courier New, Courier</li>
+                <li>Garamond</li>
+                <li>Georgia</li>
+                <li>Lucida Sans, Lucida Grande, Lucida</li>
+                <li>Palatino Linotype</li>
+                <li>Tahoma</li>
+                <li>Times New Roman, Times</li>
+                <li>Trebuchet</li>
+                <li>Verdana</li>
+			</ul>
+			
+			<br>
+			<h4>Embedding Web Fonts</h4>
+			We also have the ability to upload fonts to a server and include them on a website via the CSS @font-face at-rule. This capability has done wonders for online typography. <br><br>
+			
+			First, we use the <code>@font-face</code> at-rule to identify our font’s name, via the font-family property, as well as the source of our font (the path to the font file containing our chosen font), via the src property. From there we are able to use this font by including its name within any font-family property value.<br>
+			
+			 <!--Fonts 1-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h2 id="font1">This is Bitstream Vera Serif.</h2>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h2 id="font1">This is Bitstream Vera Serif.&lt;/h2></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>@font-face {
+	font-family: "Bitstream Vera Serif";
+	src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+}
+#font1{
+	font-family: "Bitstream Vera Serif", serif;
+}</code></pre>
+			</div>
+			
+			<br>
+			<!--Font formats-->
+			<h4>Different Font formats</h4>
+
+			<ul>
+			    <li>TrueType Fonts (TTF)</li>
+                <li>OpenType Fonts (OTF)</li>
+                <li>The Web Open Font Format (WOFF)</li>
+                <li>The Web Open Font Format (WOFF 2.0)</li>
+                <li>SVG Fonts/Shapes</li>
+                <li>Embedded OpenType Fonts (EOT)</li>
+			</ul>
+			
+			<br>
+			Fortunately, the value of using new typefaces online has been recognized, and companies have begun developing ways to license and include new fonts on websites. Google Fonts license the fonts for free.<br><br>
+			
+			Let’s head over to the <a href="https://www.google.com/fonts">Google Fonts</a> website and search for the font we’d like to use, 'Indie Flower'. Google will give us an additional &lt;link> element to include in the &lt;head> element of all of our pages. The new element will include the proper style sheet reference to Google, which will take care of including a new CSS file with the proper <code>@font-face</code> at-rule necessary for us to use our desired font.
+			
+			<!--Fonts 2-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h2 id="font2">This is Indie Flower.</h2>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h2 id="font2">This is Indie Flower.&lt;/h2></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#font2{
+	font-family: "Indie Flower", cursive;
+}</code></pre>
+			</div>
+			
+			<br>
+			For the above example to work, you should make sure to add the following in your &lt;head> section:
+			<div class="highlight"><pre class="prettyprint"><code>&lt;link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'></code></pre>
+			</div>
+			<strong>Now try to add another font you like from Google fonts!</strong>
+			
+			<!--References-->
+			<h3>References</h3>
+			<ul>
+				<li> <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Using_CSS_gradients">Mozilla Developer Network - CSS Gradients</a> </li>
+				<li> <a href="http://www.w3schools.com/css/css3_gradients.asp">W3Schools - CSS3 Gradients</a> </li>
+				<li> <a href="http://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/">Learn Shayhowe - Setting Backgrounds & Gradients</a> </li>
+				<li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/%40font-face">Mozilla Developer Network - @font-face</a> </li>
+				<li> <a href="http://www.w3schools.com/cssref/css3_pr_font-face_rule.asp">W3Schools - CSS3 Fonts</a> </li>
+				<li> <a href="http://learn.shayhowe.com/html-css/working-with-typography/#web-safe-fonts">Learn Shayhowe - Working with Typography</a> </li>
+			</ul>
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" src="../js/ZeroClipboard.min.js"></script>
+<script>
+	//Config ZeroClipboard
+	ZeroClipboard.config({
+		hoverClass: 'btn-clipboard-hover'
+	})
+
+	// Insert copy to clipboard button before .highlight
+	$('.highlight').each(function () {
+		var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>';
+		$(this).before(btnHtml)
+	});
+
+	var zeroClipboard = new ZeroClipboard($('.btn-clipboard'));
+	var htmlBridge = $('#global-zeroclipboard-html-bridge');
+
+	// Handlers for ZeroClipboard
+	zeroClipboard.on('ready', function (event) {
+		htmlBridge
+			.data('placement', 'top')
+			.attr('title', 'Copy to clipboard')
+			.tooltip();
+
+		// Copy to clipboard
+		zeroClipboard.on('copy', function (event) {
+			var highlight = $(event.target).parent().nextAll('.highlight').first();
+			event.clipboardData.setData("text/plain", highlight.text())
+		});
+
+		// Notify copy success and reset tooltip title
+		zeroClipboard.on('aftercopy', function () {
+			htmlBridge
+				.attr('title', 'Copied!')
+				.tooltip('fixTitle')
+				.tooltip('show')
+				.attr('title', 'Copy to clipboard')
+				.tooltip('fixTitle')
+		});
+	});
+
+	// Notify copy failure
+	zeroClipboard.on('error', function () {
+		ZeroClipboard.destroy();
+		htmlBridge
+			.attr('title', 'Flash required')
+			.tooltip('fixTitle')
+			.tooltip('show');
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CMSC 2 Introduction to Internet</title>	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/github-gist.css">
+	<style>
+		.navigation a{
+			float:left;
+			width:100px;
+			text-decoration:none;
+			color:white;
+			background-color:#6495ED;
+			padding: 10px;
+			border-right:1px solid white;
+			text-align:center;
+		}
+		
+		.navigation a:hover {
+			background-color:gray;
+		}
+		
+		.to-clear-left{
+		    clear:left;
+		}
+
+		.pos-relative {
+			background-color: #d6d7d8;
+			width: 100px;
+			height: 100px;
+			margin: 5px;
+			
+			position:relative;
+			top:20px;
+			right:20px;
+		}
+		
+		.pos-absolute {
+			background-color: #d6d7d8;
+			width: 100px;
+			height: 100px;
+			margin: 5px;
+			
+			position:absolute;
+			top:20px;
+			right:20px;/**/
+		}
+		
+		.box {
+			background-color: gray;
+			width: 100px;
+			height: 100px;
+			margin: 5px;
+		}
+		
+		.pos-container{
+			position:relative;
+			
+		}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="jumbotron">
+				<h1 id="title">
+					CMSC 2 <small>Introduction to the Internet</small>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<!--div class="row clearfix">
+		<div class="col-md-3 column">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="../index.html">Home</a>
+				</li>
+				<li>
+					<a href="#">Hello World</a>
+				</li>
+				<li>
+					<a href="text-formatting-1.html">Text Formatting 1</a>
+				</li>
+				<li>
+					<a href="text-formatting-2.html">Text Formatting 2</a>
+				</li>
+				<li>
+					<a href="images-1.html">Images 1</a>
+				</li>
+				<li>
+					<a href="images-2.html">Images 2</a>
+				</li>
+				<li>
+					<a href="anchors.html">Anchors</a>
+				</li>
+				<li>
+					<a href="links.html">Links</a>
+				</li>
+				<li>
+					<a href="form-1.html">Form 1</a>
+				</li>
+				<li>
+					<a href="form-2.html">Form 2</a>
+				</li>
+				<li  class="active">
+					<a href="boc-model-1.html">Box Model 1</a>
+				</li>
+				<li>
+					<a href="box-model-2.html">Box Model 2</a>
+				</li>
+			</ul>
+		</div-->
+		<div class="col-md-9 column">
+			<h2>Box Model 2</h2>
+			For this exercise, create an html file in the public/css-exercises folder named <strong>box-model-2.html</strong>. Save your external stylesheet (css file) in public/css folder as <strong>box-model-2.css</strong>.<br><br>
+			
+			In HTML, there is another classification of elements: inline or block.
+			
+			<!--Inline-->
+			<h4>Inline Element</h4>
+			An inline element is an element that lies on the line with no subsequent break, unless the line has come to the end of available browser space.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<img src="http://www.chykwest.com/wp-content/uploads/family-tree.jpg" width="100">
+					<img src="http://lakelandtn.gov/images/pages/N147/tree.png"  width="100">
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;img src="http://www.chykwest.com/wp-content/uploads/family-tree.jpg" width="100"><br>&lt;img src="http://lakelandtn.gov/images/pages/N147/tree.png" width="100"></code></pre>
+			</div>
+			
+			Subsequent images in the above example were displayed side-by-side. No break after each image.<br>
+			Other inline elements: <code>&lt;a>, &lt;span></code>
+			
+			<!--Block-->
+			<h4>Block level Element</h4>
+			A block level element defines a block, and there is a break between it and the next element.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<p> First paragraph </p>
+					<p> Second paragraph </p>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;p> First paragraph &lt;/p><br>&lt;p> Second paragraph &lt;/p></code></pre>
+			</div>
+			
+			Other inline elements: <code>&lt;h1>, &lt;table></code>
+			<br><br>
+			Knowing whether an element is an inline element or a block element will help in positioning the element in a web page.
+			There are different properties to position an element like the <code>float</code> and <code>position</code> properties.
+			
+			<!--Float-->
+			<h4>Float Property</h4>
+			The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it.
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h4>Barrel Cactus</h4>
+					
+					<img src="http://www.veeriku.tartu.ee/~ppensa/cactusbar.jpg" height="100" > 
+					The colors are beautiful, but the barrel cactus has an inner secret: if you are in need of hydration in the desert, this cactus has a lot of fluid inside and has saved the lives of many. Barrel cactus buds typically start to bloom in April with a bright yellow or orange flower. Pink and red varieties also exist but occur less frequently. The flowers only appear on the very top of the plant.
+					<!--img src="http://st.houzz.com/simgs/cdc1a05c0068a1aa_4-4420/landscape.jpg" height="200" style="float:right"-->
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h4>Barrel Cactus&lt;/h4><br>&lt;img src="http://www.veeriku.tartu.ee/~ppensa/cactusbar.jpg" height="100"> <br>The colors are beautiful, but the barrel cactus has an inner secret: if you are in need of hydration in the desert, this cactus has a lot of fluid inside and has saved the lives of many. Barrel cactus buds typically start to bloom in April with a bright yellow or orange flower. Pink and red varieties also exist but occur less frequently. The flowers only appear on the very top of the plant.</code></pre>
+			</div>
+			
+			Remember your images-2.html exercise? Like the example above, without float, text following an image will flow below it. By using the float property, text will flow around the floated image showed by the following example:<br><br>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<h4>Barrel Cactus</h4>
+					
+					<img src="http://www.veeriku.tartu.ee/~ppensa/cactusbar.jpg" height="100" style="float:left; margin:10px;"> The colors are beautiful, but the barrel cactus has an inner secret: if you are in need of hydration in the desert, this cactus has a lot of fluid inside and has saved the lives of many. Barrel cactus buds typically start to bloom in April with a bright yellow or orange flower. Pink and red varieties also exist but occur less frequently. The flowers only appear on the very top of the plant.
+					<!--img src="http://st.houzz.com/simgs/cdc1a05c0068a1aa_4-4420/landscape.jpg" height="200" style="float:right"-->
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;h4>Barrel Cactus&lt;/h4><br>&lt;img src="http://www.veeriku.tartu.ee/~ppensa/cactusbar.jpg" height="100"> <br>The colors are beautiful, but the barrel cactus has an inner secret: if you are in need of hydration in the desert, this cactus has a lot of fluid inside and has saved the lives of many. Barrel cactus buds typically start to bloom in April with a bright yellow or orange flower. Pink and red varieties also exist but occur less frequently. The flowers only appear on the very top of the plant.</code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>img {
+	float: left;
+	margin: 10px;
+}</code></pre>
+			</div>
+			
+			<em>Float Property Behavior</em>
+			<ul>
+				<li>Texts and other elements will continue to flow around the floated element. (but not divs! Divs following a floated element will stay behind the floated element. More on this later.)</li>
+				<li>Try adding a new heading after the code of the above example, say, another type of cactus. See what happens:
+				<br><div class="highlight"><pre class="prettyprint"><code>&lt;h4>Columnar Cactus&lt;/h4></code></pre><br>
+				
+				Notice that the new heading still flows around the floated barrel cactus image which may not be what we want. To <em>turn-off</em> floats, we can use the <code>clear</code> property. The <code>clear</code> property specifies on which sides of an element floating elements are not allowed. It's values are: left, right, both.<br><br>
+				Try changing the Columnar Cactus heading to something like this and add the following css:
+				
+				<br><div class="highlight"><pre class="prettyprint"><code>&lt;h4 class="to-clear-left">Columnar Cactus&lt;/h4></code></pre>
+				<div class="highlight"><pre class="prettyprint"><code>.to-clear-left{
+    clear:left;
+}</code></pre>
+				See that the Columnar Cactus heading turned the float off and went back to the normal flow.<br><br>
+				</li>
+				<li>For example, we want to create columns in our page so we float two divs to the opposite sides. The problem here is that the divs will continue to spread apart as the browser size increases, and come together as the browser size decreases. Try resizing your browser window and see what happens to the following example: </li>
+				
+				<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div style="background-color:lightblue; float:left; width:300px; height:350px; margin:5px;">div 1</div>
+					<div style="background-color:#40E0D0; float:right; width:300px; height:350px; margin:5px;">div 2</div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="div1">div 1&lt;/div><br>&lt;div id="div2">div 2&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#div1 {
+	width: 300px; 
+	height: 350px;
+	margin: 5px;
+	background-color: lightblue; 
+	float: left;
+}
+#div2 {
+	width: 300px; 
+	height: 350px;
+	margin: 5px;
+	background-color: #40E0D0; 
+	float: right;
+}</code></pre>
+			</div>
+			
+				<li>To avoid this behavior, we simply float elements in the same direction. Change your CSS to something like the following:</li>
+				
+				<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div style="background-color:lightblue; float:left; width:300px; height:350px; margin:5px;">div 1</div>
+					<div style="background-color:#40E0D0; float:left; width:300px; height:350px; margin:5px;">div 2</div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div id="div1">div 1&lt;/div><br>&lt;div id="div2">div 2&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>#div1 {
+	width: 300px; 
+	height: 350px;
+	margin: 5px;
+	background-color: lightblue; 
+	float: left;
+}
+#div2 {
+	width: 300px; 
+	height: 350px;
+	margin: 5px;
+	background-color: #40E0D0; 
+	float: left;
+}</code></pre>
+			</div>
+			</ul>
+			
+			<br>
+			<!--Horizontal Nav-->
+			<em>Horizontal Navigation</em><br>
+			Another use of float is for creating a horizontal navigation in web pages.
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div class="navigation">
+						<a href="#">Home</a>
+						<a href="#">About</a>
+						<a href="#">Contact</a>
+						<a href="#">Feedback</a>
+					</div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div>
+	&lt;a href="#">Home&lt;/a>
+	&lt;a href="#">About&lt;/a>
+	&lt;a href="#">Contact&lt;/a>
+	&lt;a href="#">Feedback&lt;/a>
+&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>a {	
+	float:left;
+	width:100px;
+	text-decoration:none;
+	color:white;
+	background-color:#6495ED;
+	padding: 10px;
+	border-right:1px solid white;
+	text-align:center;
+}
+
+a:hover {
+	background-color:gray;
+}</code></pre>
+			</div>
+			<strong>What should you add to move the navigation below the two divs?</strong><br>
+			<em>Hint! Add this existing <code>class</code> to the navigation <code>div</code> to turn off float.</em>
+
+
+			<!--Positioning-->
+			<h4>CSS Positioning</h4>
+			The <code>position</code> property allows positioning of HTML elements in a variety of ways. It can also place an element behind another.
+			Types:
+			<ol>
+				<li>Relative Positioning</li>
+				<li>Absolute positioning</li>
+				<li>Fixed Positioning</li>
+			</ol>
+
+			<!--Normal Position-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div class="parent">
+			    		<div>
+			    		    <div class="box">One</div>
+			        		<div class="box">Two</div>
+			        		<div class="box">Three</div>
+			    		</div>
+					</div>
+				</div>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div>
+	&lt;div class="box">One&lt;/div>
+	&lt;div class="box">Two&lt;/div>
+	&lt;div class="box">Three&lt;/div>
+&lt;/div></code></pre>
+			</div>
+			<div class="highlight"><pre class="prettyprint"><code>.box {
+	background-color: gray;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+}</code></pre>
+			</div>
+			<em>Note: You may use the class <code>to-clear-left</code> again in the div containing the boxes.</em><br><br>
+			
+			<h4>Relative Positioning</h4>
+			A relative positioned element is positioned relative to its normal position. The box is shifted from this normal position according to the properties — <code>top</code> or <code>bottom</code> and/or <code>left</code> or <code>right</code>.<br><br>
+			
+			The <code>position</code> properties of the three boxes are not set. Take note of their normal position above. Now, let us try set the box Two to position <code>relative</code>. <br><br>
+			
+			<strong>Change the class of box Two in your HTML:</strong><br><br>
+			
+			<!--HTML Relative Example-->
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div>
+	&lt;div class="box">&lt;/div>
+	&lt;div class="pos-relative">&lt;/div>
+	&lt;div class="box">&lt;/div>
+&lt;/div></code></pre>
+			</div>
+			
+			 <br><br><strong>Also, add the following to your CSS code:</strong><br><br>
+			 
+			 <!--CSS Relative Example-->
+			<div class="highlight"><pre class="prettyprint"><code>.pos-relative {
+	background-color: #d6d7d8;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	
+	/*To properly position an element using relative, top or bottom (choose one) 
+	and/or left or right (choose one) properties should be used.*/
+	position:relative;
+	top:20px;
+	right:20px;
+}</code></pre>
+			</div>
+			
+			<!--Relative Example-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div class="parent">
+			    		<div>
+			    		    <div class="box">One</div>
+			        		<div class="pos-relative">Two</div>
+			        		<div class="box">Three</div>
+			    		</div>
+					</div>
+				</div>
+			</div>
+			
+			<br> 
+			Notice that from box Two's normal position, it was offset 20px down (caused by top:20px;) and 20px to the left (caused by right 20px). This means that from it's original position, 20px was added to the top edge which caused the box to move down. Same with adding 20px to the right edge causing it to move left. <br><br>
+			
+			<code>top</code>, <code>bottom</code>, <code>left</code>, and <code>right</code> can have negative values which will cause the reverse effect of the positive values.<br><br>
+			
+			
+			<h4>Absolute Positioning</h4>
+			An absolutely positioned element:
+			<ul>
+				<li>is removed from normal flow</li>
+				<li>is positioned in relation to
+					<ul>
+						<li>a positioned container element</li>
+						<li>the root element HTML (if no positioned container was found)</li>
+					</ul>
+				</li>
+			</ul>
+
+			<strong>Again modify your HTML:</strong><br><br>
+			
+			<!--HTML Absolute Example-->
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div class="pos-container">
+	&lt;div class="box">&lt;/div>
+	&lt;div class="pos-absolute">&lt;/div>
+	&lt;div class="box">&lt;/div>
+&lt;/div></code></pre>
+			</div>
+			
+			 <br><br><strong>Also, add the following to your CSS code:</strong><br><br>
+			 
+			 <!--CSS Absolute Example-->
+			<div class="highlight"><pre class="prettyprint"><code>.pos-container{
+	position:relative;
+	
+}
+.pos-absolute {
+	background-color: #d6d7d8;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	
+	/*To properly position an element using absolute, top or bottom (choose one) 
+	and/or left or right (choose one) properties should be used.*/
+	position:absolute;
+	top:20px;
+	right:20px;
+}</code></pre>
+			</div>
+			
+			<!--Absolute Example-->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">Example</h4>
+				</div>
+				<div class="panel-body">
+					<div class="parent">
+			    		<div class="pos-container">
+			    		    <div class="box">One</div>
+			        		<div class="pos-absolute">Two</div>
+			        		<div class="box">Three</div>
+			    		</div>
+					</div>
+				</div>
+			</div>
+			
+			<br> 
+			Different from the effect of relative positioning, absolute positioning placed box Two relative to its positioned parent. In the code above, we have added a class <code>pos-container</code> and set it to be positioned <code>relative</code>. This div is the container of our boxes. Since box Two is set to absolute, it looked for a positioned container and was offset from the edges of that container.<br><br>
+			
+			Notice too that in relative positioning, the space for box Two was preserved while in absolute positioning, the space was occupied by the following element.
+			
+			<!--Fixed Positioning-->
+			<h4>Fixed Positioning</h4>
+			Fixed positioning is a subcategory of absolute positioning. The only difference is that a fixed positioned element is fixed with respect to the browser's viewport and does not move when scrolled.<br><br>
+
+			<strong>Change the class of box Two for the last time:</strong><br><br>
+			
+			<!--HTML Fixed Example-->
+			<div class="highlight"><pre class="prettyprint"><code>&lt;div class="pos-container">
+	&lt;div class="box">&lt;/div>
+	&lt;div class="pos-fixed">&lt;/div>
+	&lt;div class="box">&lt;/div>
+&lt;/div></code></pre>
+			</div>
+			
+			 <br><br><strong>Change the class and the position value to <code>fixed</code> and see what happens:</strong><br><br>
+			 
+			 <!--CSS Fixed Example-->
+			<div class="highlight"><pre class="prettyprint"><code>.pos-fixed {
+	background-color: #d6d7d8;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	
+	/*To properly position an element using fixed, top or bottom (choose one) 
+	and/or left or right (choose one) properties should be used.*/
+	position:fixed;
+	top:20px;
+	right:20px;
+}</code></pre>
+			</div>
+			
+			<!--Overlapping Elements-->
+			<h4>Overlapping Elements</h4>
+			When elements are positioned outside the normal flow, they can overlap other elements. The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others). An element can have a positive or negative stack order.<br><br>
+			
+			An element with greater stack order is always in front of an element with a lower stack order.<br>
+			<em>Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.</em>
+
+			<!--References-->
+			<h4>References</h4>
+			<ul>
+				<li> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">Mozilla Developer Network - position</a> </li>
+				<li> <a href="http://www.w3schools.com/css/css_positioning.asp">W3Schools - CSS Positioning</a> </li>
+			</ul>
+		</div><!--col-md-9-->
+	</div><!--end of row-->
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript" src="../js/ZeroClipboard.min.js"></script>
+<script>
+	//Config ZeroClipboard
+	ZeroClipboard.config({
+		hoverClass: 'btn-clipboard-hover'
+	})
+
+	// Insert copy to clipboard button before .highlight
+	$('.highlight').each(function () {
+		var btnHtml = '<div class="zero-clipboard"><span class="btn-clipboard">Copy</span></div>';
+		$(this).before(btnHtml)
+	});
+
+	var zeroClipboard = new ZeroClipboard($('.btn-clipboard'));
+	var htmlBridge = $('#global-zeroclipboard-html-bridge');
+
+	// Handlers for ZeroClipboard
+	zeroClipboard.on('ready', function (event) {
+		htmlBridge
+			.data('placement', 'top')
+			.attr('title', 'Copy to clipboard')
+			.tooltip();
+
+		// Copy to clipboard
+		zeroClipboard.on('copy', function (event) {
+			var highlight = $(event.target).parent().nextAll('.highlight').first();
+			event.clipboardData.setData("text/plain", highlight.text())
+		});
+
+		// Notify copy success and reset tooltip title
+		zeroClipboard.on('aftercopy', function () {
+			htmlBridge
+				.attr('title', 'Copied!')
+				.tooltip('fixTitle')
+				.tooltip('show')
+				.attr('title', 'Copy to clipboard')
+				.tooltip('fixTitle')
+		});
+	});
+
+	// Notify copy failure
+	zeroClipboard.on('error', function () {
+		ZeroClipboard.destroy();
+		htmlBridge
+			.attr('title', 'Flash required')
+			.tooltip('fixTitle')
+			.tooltip('show');
+	});
+</script>
+
+</body>
+</html>
